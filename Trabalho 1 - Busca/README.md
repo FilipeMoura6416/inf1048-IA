@@ -120,6 +120,7 @@ python autograder.py -q q1
 Implemente um algoritmo de busca em largura na função `breadthFirstSearch` dentro do arquivo `search.py`. A versão implementada deve ser da busca em grafo, ou seja, evite explorar nodos da fronteira que ja tenham sido visitados.
 
 Para testar sua implementação, utilize os comandos abaixo:
+
 ``
 python pacman.py -l tinyMaze -p SearchAgent -a fn=bfs
 ``
@@ -200,9 +201,11 @@ Implemente os métodos da classe `CornersProblem` (que estende a classe `SearchP
 python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
 ```
 <br/>
+
 ```
 python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
 ```
+
 Tome cuidado para que a representação abstrata de estado proposta não codifique informações irrelevantes (como a posição dos fantasmas, a localização de alimentos extras etc.). Em particular, não utilize um `GameState` do Pacman como estado de busca. Caso contrário, seu código será extremamente lento (e também incorreto).
 
 Uma instância da classe `CornersProblem` representa todo o problema de busca, e não um estado específico. Estados particulares são retornados pelas funções que você escrever, e essas funções devem retornar uma estrutura de dados à sua escolha (por exemplo, _tuple_, _set_ etc.) que represente um estado.
