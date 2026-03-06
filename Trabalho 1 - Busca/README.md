@@ -123,9 +123,11 @@ Para testar sua implementação, utilize os comandos abaixo:
 ``
 python pacman.py -l tinyMaze -p SearchAgent -a fn=bfs
 ``
+<br/>
 ``
 python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
 ``
+<br/>
 ``
 python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=bfs
 ``
@@ -153,9 +155,11 @@ Seu algoritmo deve ter sucesso em todos os layouts de labirinto dos comandos aba
 ``
 python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs
 ``
+<br/>
 ``
 python pacman.py -l mediumDottedMaze -p StayEastSearchAgent
 ``
+<br/>
 ``
 python pacman.py -l mediumScaryMaze -p StayWestSearchAgent
 ``
@@ -195,6 +199,7 @@ Implemente os métodos da classe `CornersProblem` (que estende a classe `SearchP
 ```
 python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
 ```
+<br/>
 ```
 python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
 ```
