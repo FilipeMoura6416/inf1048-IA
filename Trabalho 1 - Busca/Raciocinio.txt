@@ -3,9 +3,25 @@ A partir da origem verificar todas os movimentos possíveis
 Cada SearcProblem tem sua própria função custo
 Chamar searchProblem.Getsucessor devolve uma lista de sucessores 
 
+Problema:
+Os nodos ainda não existem eles serão criados ao longo da execução do algoritmo, ou seja não é possível usar uma lista e acessar seus indices para verificar as distâncias de cada nodo.
+Solução: 
+usar um dicionário onde o state é o id e a distância é o conteúdo
+o que armazenar no dicionário?
+bool analisado
+distancia 
+state anterior
+state
+action
+custo
+
 Criar uma classe nodo para guardar:
 As informações recebidas da tripla sucessora, ou seja o estado, o movimento e o custo
 E custo aumulado
+
+sucessor[0] = state
+sucessor[1] = action
+sucessor[2] = cost
 
 //Inicialização
 priority_queue <- nodo inicial
@@ -15,6 +31,7 @@ Enquanto não é estado objetivo
     for sucessor in problem.getsucessor(nodo.state)
         if sucessor.state not in problem._visited
             novo_custo_acumulado = nodo.custo_acumulado + sucessor.custo
-                if nodo.state not in distancias 
-                    novo_novo = 
-            if novo_custo_acumulado
+            if sucessor.state not in distancias 
+                novo_nodo = Nodo() 
+            if novo_custo_acumulado < nodo.custo_acumulado
+
