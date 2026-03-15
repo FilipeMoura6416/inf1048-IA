@@ -82,9 +82,9 @@ def depthFirstSearch(problem):
     To get started, you might want to try some of these simple commands to
     understand the search problem that is being passed in:
 
-    print("Start:", problem.getStartState())
-    print("Is the start a goal?", problem.isGoalState(problem.getStartState()))
-    print("Start's successors:", problem.getSuccessors(problem.getStartState()))
+    ##print("Start:", problem.getStartState())
+    ##print("Is the start a goal?", problem.isGoalState(problem.getStartState()))
+    ##print("Start's successors:", problem.getSuccessors(problem.getStartState()))
     """
     "*** YOUR CODE HERE ***"
     util.raiseNotDefined()
@@ -106,9 +106,11 @@ def uniformCostSearch(problem: SearchProblem):
             self.acumulated_cost = acumulated_cost
             self.cost = cost
     
-    def create_action_list(action_list: list, nodo: NodoGameTree):
-        create_action_list(action_list, nodo.previous_state)
-        action_list.append(nodo.action)
+    def create_action_list(action_list: list, dicionario:dict,  nodo: NodoGameTree):
+        if nodo.previous_state != None:
+            create_action_list(action_list, dicionario, dicionario[nodo.previous_state])
+            ##print(nodo.state)
+            action_list.append(nodo.action)
         return action_list
 
     
@@ -117,27 +119,36 @@ def uniformCostSearch(problem: SearchProblem):
     first_nodo = NodoGameTree(problem.getStartState(), None, None, None, 0)
     goalState = NodoGameTree(None, None, None, None, float('inf'), False)
     dicionario[first_nodo.state] = first_nodo
-    pq.push(first_nodo, first_nodo.aculated_cost)
-    while not pq.isEmpty():
-
+    pq.push(first_nodo, first_nodo.acumulated_cost)
+    while not pq.isEmpty() and pq.heap[0][2].acumulated_cost < goalState.acumulated_cost:
         atual:NodoGameTree = pq.pop()
+        ##print("Analisando", atual.state)
         atual.analisado = True
         for sucessor in problem.getSuccessors(atual.state):
-            if sucessor not in dicionario:
+            if sucessor[0] not in dicionario:
+                ##print(sucessor[0], "Não estava no dicionario")
                 novo_nodo = NodoGameTree(sucessor[0], sucessor[1], sucessor[2], None, float('inf'), False)
                 dicionario[novo_nodo.state] = novo_nodo
             nodo_sucessor:NodoGameTree = dicionario[sucessor[0]]
             if not nodo_sucessor.analisado:
-                new_acumulated_cost = atual.aculated_cost + sucessor[2]
+                ##print("Tentando achar um caminho menor para", nodo_sucessor.state, " Action: ", nodo_sucessor.action)
+                new_acumulated_cost = atual.acumulated_cost + sucessor[2]
+                ##print("Caminho menor encontrado?", new_acumulated_cost, nodo_sucessor.acumulated_cost)
                 if new_acumulated_cost < nodo_sucessor.acumulated_cost:
+                    ##print("Sim")
                     nodo_sucessor.acumulated_cost = new_acumulated_cost
-                    pq.push(nodo_sucessor, nodo_sucessor.acumulated_cost)
                     nodo_sucessor.previous_state = atual.state
+                    nodo_sucessor.action = sucessor[1]
+                    ##print("Nodo antecessor", atual.state)
                     if problem.isGoalState(nodo_sucessor.state):
-                        if nodo_sucessor.acumulated_cost < goalState.acumulated_cost:
-                            goalState = nodo_sucessor
+                        goalState = nodo_sucessor
+                        ##print("Goal state: ", goalState.state, " Antecessor: ", goalState.previous_state, " Action: ", goalState.action)
+                    else:
+                        pq.push(nodo_sucessor, nodo_sucessor.acumulated_cost)
     
-    return create_action_list(list(), goalState)
+    action_list = create_action_list(list(), dicionario, goalState)
+    ##print(action_list)
+    return action_list
     
 
 
