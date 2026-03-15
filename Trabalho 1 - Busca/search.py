@@ -94,12 +94,55 @@ def breadthFirstSearch(problem):
     "*** YOUR CODE HERE ***"
     util.raiseNotDefined()
 
-def uniformCostSearch(problem):
+def uniformCostSearch(problem: SearchProblem):
     """Search the node of least total cost first."""
+    class NodoGameTree:
+        
+        def __init__(self, state, action, cost, previous_state, acumulated_cost, analisado=False):
+            self.state = state
+            self.action = action
+            self.analisado = analisado
+            self.previous_state = previous_state
+            self.acumulated_cost = acumulated_cost
+            self.cost = cost
+    
+    def create_action_list(action_list: list, nodo: NodoGameTree):
+        create_action_list(action_list, nodo.previous_state)
+        action_list.append(nodo.action)
+        return action_list
 
-    ##Verificar
+    
+    dicionario = dict()
+    pq = util.PriorityQueue()
+    first_nodo = NodoGameTree(problem.getStartState(), None, None, None, 0)
+    goalState = NodoGameTree(None, None, None, None, float('inf'), False)
+    dicionario[first_nodo.state] = first_nodo
+    pq.push(first_nodo, first_nodo.aculated_cost)
+    while not pq.isEmpty():
 
-    util.raiseNotDefined()
+        atual:NodoGameTree = pq.pop()
+        atual.analisado = True
+        for sucessor in problem.getSuccessors(atual.state):
+            if sucessor not in dicionario:
+                novo_nodo = NodoGameTree(sucessor[0], sucessor[1], sucessor[2], None, float('inf'), False)
+                dicionario[novo_nodo.state] = novo_nodo
+            nodo_sucessor:NodoGameTree = dicionario[sucessor[0]]
+            if not nodo_sucessor.analisado:
+                new_acumulated_cost = atual.aculated_cost + sucessor[2]
+                if new_acumulated_cost < nodo_sucessor.acumulated_cost:
+                    nodo_sucessor.acumulated_cost = new_acumulated_cost
+                    pq.push(nodo_sucessor, nodo_sucessor.acumulated_cost)
+                    nodo_sucessor.previous_state = atual.state
+                    if problem.isGoalState(nodo_sucessor.state):
+                        if nodo_sucessor.acumulated_cost < goalState.acumulated_cost:
+                            goalState = nodo_sucessor
+    
+    return create_action_list(list(), goalState)
+    
+
+
+
+
 
 def nullHeuristic(state, problem=None):
     """
