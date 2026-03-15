@@ -1,0 +1,20 @@
+Dijkstra:
+A partir da origem verificar todas os movimentos possíveis 
+Cada SearcProblem tem sua própria função custo
+Chamar searchProblem.Getsucessor devolve uma lista de sucessores 
+
+Criar uma classe nodo para guardar:
+As informações recebidas da tripla sucessora, ou seja o estado, o movimento e o custo
+E custo aumulado
+
+//Inicialização
+priority_queue <- nodo inicial
+distancias[nodo_incial.state] = 0
+Enquanto não é estado objetivo
+    Nodo <- pq.pop
+    for sucessor in problem.getsucessor(nodo.state)
+        if sucessor.state not in problem._visited
+            novo_custo_acumulado = nodo.custo_acumulado + sucessor.custo
+                if nodo.state not in distancias 
+                    novo_novo = 
+            if novo_custo_acumulado
