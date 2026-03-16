@@ -164,8 +164,60 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    class NodoGameTree:
+        
+        def __init__(self, state, action, cost, previous_state, acumulated_cost, problem, heuristic, analisado=False):
+            self.state = state
+            self.action = action
+            self.analisado = analisado
+            self.previous_state = previous_state
+            self.acumulated_cost = acumulated_cost
+            self.cost = cost
+            self.heuristic_value = heuristic(self.state, problem) if self.state != None else float('inf')
+    
+    def create_action_list(action_list: list, dicionario:dict,  nodo: NodoGameTree):
+        if nodo.previous_state != None:
+            create_action_list(action_list, dicionario, dicionario[nodo.previous_state])
+            ##print(nodo.state)
+            action_list.append(nodo.action)
+        return action_list
+
+    
+    dicionario = dict()
+    pq = util.PriorityQueue()
+    first_nodo = NodoGameTree(problem.getStartState(), None, None, None, 0, problem, heuristic)
+    goalState = NodoGameTree(None, None, None, None, float('inf'), problem, heuristic, False)
+    dicionario[first_nodo.state] = first_nodo
+    pq.push(first_nodo, first_nodo.acumulated_cost + first_nodo.heuristic_value)
+    while not pq.isEmpty() and pq.heap[0][2].acumulated_cost + pq.heap[0][2].heuristic_value < goalState.acumulated_cost:
+        atual:NodoGameTree = pq.pop()
+        ##print("Analisando", atual.state)
+        atual.analisado = True
+        for sucessor in problem.getSuccessors(atual.state):
+            if sucessor[0] not in dicionario:
+                ##print(sucessor[0], "Não estava no dicionario")
+                novo_nodo = NodoGameTree(sucessor[0], sucessor[1], sucessor[2], None, float('inf'), problem, heuristic, False)
+                dicionario[novo_nodo.state] = novo_nodo
+            nodo_sucessor:NodoGameTree = dicionario[sucessor[0]]
+            if not nodo_sucessor.analisado:
+                ##print("Tentando achar um caminho menor para", nodo_sucessor.state, " Action: ", nodo_sucessor.action)
+                new_acumulated_cost = atual.acumulated_cost + sucessor[2]
+                ##print("Caminho menor encontrado?", new_acumulated_cost, nodo_sucessor.acumulated_cost)
+                if new_acumulated_cost < nodo_sucessor.acumulated_cost:
+                    ##print("Sim")
+                    nodo_sucessor.acumulated_cost = new_acumulated_cost
+                    nodo_sucessor.previous_state = atual.state
+                    nodo_sucessor.action = sucessor[1]
+                    ##print("Nodo antecessor", atual.state)
+                    if problem.isGoalState(nodo_sucessor.state):
+                        goalState = nodo_sucessor
+                        ##print("Goal state: ", goalState.state, " Antecessor: ", goalState.previous_state, " Action: ", goalState.action)
+                    else:
+                        pq.push(nodo_sucessor, nodo_sucessor.acumulated_cost + nodo_sucessor.heuristic_value)
+    
+    action_list = create_action_list(list(), dicionario, goalState)
+    ##print(action_list)
+    return action_list
 
 
 # Abbreviations
