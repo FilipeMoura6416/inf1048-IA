@@ -40,6 +40,8 @@ from game import Actions
 import util
 import time
 import search
+import math
+
 
 class GoWestAgent(Agent):
     "An agent that goes West until it can't."
@@ -281,28 +283,29 @@ class CornersProblem(search.SearchProblem):
         self.startingPosition = startingGameState.getPacmanPosition()
         top, right = self.walls.height-2, self.walls.width-2
         self.corners = ((1,1), (1,top), (right, 1), (right, top))
+        self.corners_to_visit = dict()
         for corner in self.corners:
+            self.corners_to_visit[corner] = True
             if not startingGameState.hasFood(*corner):
                 print('Warning: no food in corner ' + str(corner))
         self._expanded = 0 # DO NOT CHANGE; Number of search nodes expanded
         # Please add any code here which you would like to use
         # in initializing the problem
-        "*** YOUR CODE HERE ***"
+        
 
     def getStartState(self):
         """
         Returns the start state (in your state space, not the full Pacman state
         space)
         """
-        "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        return self.startingPosition
 
     def isGoalState(self, state):
         """
         Returns whether this search state is a goal state of the problem.
         """
-        "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        if len(self.corners_to_visit) == 0:
+            return True
 
     def getSuccessors(self, state):
         """
@@ -453,8 +456,41 @@ def foodHeuristic(state, problem):
     problem.heuristicInfo['wallCount']
     """
     position, foodGrid = state
-    "*** YOUR CODE HERE ***"
-    return 0
+    ##First heuristc: food count
+    ##return foodGrid.count()
+
+    ##Second heuristic: manhattan distance sum of all foods
+    """distance_sum = 0
+    for food in foodGrid.asList():
+        distance_sum += abs(position[0] - food[0]) + abs(position[1] - food[1])
+    return distance_sum"""
+
+    ##Third heuristc: manhattan distance sum of all foods diveded by the number os foods
+    """distance_sum = 0
+    food_count = foodGrid.count()
+    for food in foodGrid.asList():
+        distance_sum += abs(position[0] - food[0]) + abs(position[1] - food[1])
+    return float(distance_sum)/food_count if food_count > 0 else 0 """
+
+    ##Fourth heuristic: most distant food
+    """distance_max = float('-inf')
+    for food in foodGrid.asList():
+        distance = abs(position[0] - food[0]) + abs(position[1] - food[1])
+        distance_max = distance if distance > distance_max else distance_max
+    return distance_max"""
+
+    ##Fifth heuristic: euclidian distance sum of all foods
+    """distance_sum = 0
+    for food in foodGrid.asList():
+        distance_sum += ((position[0] - food[0]) ** 2 + (position[1] - food[1]) ** 2) ** 0.5
+    return distance_sum"""
+
+    ##Sixth heuritic: euclidian distance sum of all foods diveded by the number os foods
+    distance_sum = 0
+    food_count = foodGrid.count()
+    for food in foodGrid.asList():
+        distance_sum += ((position[0] - food[0]) ** 2 + (position[1] - food[1]) ** 2) ** 0.5
+    return distance_sum/food_count if food_count > 0 else 0
 
 class ClosestDotSearchAgent(SearchAgent):
     "Search for all food using a sequence of searches"
