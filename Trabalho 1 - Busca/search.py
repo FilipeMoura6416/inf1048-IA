@@ -87,12 +87,76 @@ def depthFirstSearch(problem):
     ##print("Start's successors:", problem.getSuccessors(problem.getStartState()))
     """
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    class NodoGameTree:
+        
+        def __init__(self, state, action, cost, previous_state, acumulated_cost, analisado=False):
+            self.state = state
+            self.action = action
+            self.analisado = analisado
+            self.previous_state = previous_state
+            self.acumulated_cost = acumulated_cost
+            self.cost = cost
+    
+    def create_action_list(action_list: list, dicionario:dict,  nodo: NodoGameTree):
+        if nodo.previous_state != None:
+            create_action_list(action_list, dicionario, dicionario[nodo.previous_state])
+            action_list.append(nodo.action)
+        return action_list
+    
+    
+    dicionario = dict()
+    stack = util.Stack()
+    first_node=  NodoGameTree(problem.getStartState(), None, None, None, 0)
+    dicionario[first_node.state] = first_node
+    stack.push(first_node)
+    current_node =  first_node 
+    while not stack.isEmpty() and not problem.isGoalState(current_node.state):
+        current_node = stack.pop()
+        current_node.analisado =  True
+        for sucessor in problem.getSuccessors(current_node.state):
+            if sucessor[0] not  in dicionario:
+                new_node =  NodoGameTree(sucessor[0], sucessor[1], sucessor[2], current_node.state, current_node.acumulated_cost + sucessor[2], False)
+                dicionario[new_node.state] = new_node
+                stack.push(new_node)
+    
+    action_list = create_action_list(list(), dicionario, current_node)
+    return action_list
 
 def breadthFirstSearch(problem):
-    """Search the shallowest nodes in the search tree first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    class NodoGameTree:
+        
+        def __init__(self, state, action, cost, previous_state, acumulated_cost, analisado=False):
+            self.state = state
+            self.action = action
+            self.analisado = analisado
+            self.previous_state = previous_state
+            self.acumulated_cost = acumulated_cost
+            self.cost = cost
+    
+    def create_action_list(action_list: list, dicionario:dict,  nodo: NodoGameTree):
+        if nodo.previous_state != None:
+            create_action_list(action_list, dicionario, dicionario[nodo.previous_state])
+            action_list.append(nodo.action)
+        return action_list
+    
+    
+    dicionario = dict()
+    queue = util.Queue()
+    first_node=  NodoGameTree(problem.getStartState(), None, None, None, 0)
+    dicionario[first_node.state] = first_node
+    queue.push(first_node)
+    current_node =  first_node 
+    while not queue.isEmpty() and not problem.isGoalState(current_node.state):
+        current_node = queue.pop()
+        current_node.analisado =  True
+        for sucessor in problem.getSuccessors(current_node.state):
+            if sucessor[0] not  in dicionario:
+                new_node =  NodoGameTree(sucessor[0], sucessor[1], sucessor[2], current_node.state, current_node.acumulated_cost + sucessor[2], False)
+                dicionario[new_node.state] = new_node
+                queue.push(new_node)
+    
+    action_list = create_action_list(list(), dicionario, current_node)
+    return action_list
 
 def uniformCostSearch(problem: SearchProblem):
     """Search the node of least total cost first."""
