@@ -457,40 +457,107 @@ def foodHeuristic(state, problem):
     """
     position, foodGrid = state
     ##First heuristc: food count
+    ##Problem: correct but no efficient expanded nodes: 12506
     ##return foodGrid.count()
 
     ##Second heuristic: manhattan distance sum of all foods
+    ##Problem: Most Efficient (expanded nodes: 5597) but incorrect overestimation of step
     """distance_sum = 0
     for food in foodGrid.asList():
         distance_sum += abs(position[0] - food[0]) + abs(position[1] - food[1])
     return distance_sum"""
 
     ##Third heuristc: manhattan distance sum of all foods diveded by the number os foods
+    ##Coorect but not efficient expanded nodes: 11278
     """distance_sum = 0
     food_count = foodGrid.count()
     for food in foodGrid.asList():
         distance_sum += abs(position[0] - food[0]) + abs(position[1] - food[1])
-    return float(distance_sum)/food_count if food_count > 0 else 0 """
+    return float(distance_sum)/food_count if food_count > 0 else 0"""
 
     ##Fourth heuristic: most distant food
-    """distance_max = float('-inf')
+    ##Problem Correct but not efficient
+    """distance_max = 0
     for food in foodGrid.asList():
         distance = abs(position[0] - food[0]) + abs(position[1] - food[1])
         distance_max = distance if distance > distance_max else distance_max
     return distance_max"""
 
     ##Fifth heuristic: euclidian distance sum of all foods
+    ##Problem: efficient but not correct  expanded nodes: 5716
     """distance_sum = 0
     for food in foodGrid.asList():
         distance_sum += ((position[0] - food[0]) ** 2 + (position[1] - food[1]) ** 2) ** 0.5
     return distance_sum"""
 
     ##Sixth heuritic: euclidian distance sum of all foods diveded by the number os foods
-    distance_sum = 0
+    ##Problem: correct but not efficient 
+    """distance_sum = 0
     food_count = foodGrid.count()
     for food in foodGrid.asList():
         distance_sum += ((position[0] - food[0]) ** 2 + (position[1] - food[1]) ** 2) ** 0.5
-    return distance_sum/food_count if food_count > 0 else 0
+    return distance_sum/food_count if food_count > 0 else 0"""
+
+    ##Seventh heuristic: most distant food (manhattan distance) minus the number of foods
+    ##Inefficient and incorrect
+    """distance_max = 0
+    count_food = 0
+    for food in foodGrid.asList():
+        distance = abs(position[0] - food[0]) + abs(position[1] - food[1])
+        distance_max = distance if distance > distance_max else distance_max
+        count_food += 1
+    if distance_max > count_food:
+        return distance_max - count_food
+    else:
+        return distance_max##count_food"""
+    
+    ##Eighth heuristic: manhattan distance sum of all foods in natural log scale
+    ##Correct but not efficient  expanded nodes: 13277
+    """distance_sum = 0
+    for food in foodGrid.asList():
+        distance_sum += abs(position[0] - food[0]) + abs(position[1] - food[1])
+    return math.log(distance_sum) + 1 if distance_sum >= 1 else 0"""
+
+    ##Ninth heuristic: square root of manhattan distance sum of all foods  
+    ##Problem Incorrect and Inefficient
+    """distance_sum = 0
+    for food in foodGrid.asList():
+        distance_sum += abs(position[0] - food[0]) + abs(position[1] - food[1])
+    return math.sqrt(distance_sum)"""
+
+    ##Tenth heuristic: square root of euclidian distance sum of all woods
+    ##Problem: correct but not efficient expanded nodes: 12020
+    """distance_sum = 0
+    for food in foodGrid.asList():
+        distance_sum += ((position[0] - food[0]) ** 2 + (position[1] - food[1]) ** 2) ** 0.5
+    return distance_sum ** (1/2)"""
+
+    ##Eleventh heuristics: mediana distance of all foods
+    ##Problem: correct but not efficient expanded nodes: 11544
+    """distances = []
+    for food in foodGrid.asList():
+        distance = abs(position[0] - food[0]) + abs(position[1] - food[1])
+        distances.append(distance)
+    distances.sort()
+    return distances[len(distances)//2] if len(distances) > 0 else 0"""
+
+    ##Twelfth heuristic: weighted food_count and manhattan distance sum of all foods
+    ##Problem: if weighted by average distance, the maximum value converges to the average distance; 
+    # if weighted by the sum of distances, the maximum value converges to the food count   
+    """distance_sum = 0
+    food_count = 0
+    for food in foodGrid.asList():
+        distance_sum += abs(position[0] - food[0]) + abs(position[1] - food[1])
+        food_count += 1
+    return 0.20*food_count + 0.80*distance_sum/food_count if food_count > 0 else 0"""
+
+    ##Thirteenth heuristic: manhattan distance sum of all foods in log scale
+    ##Problem correct but not efficient and efficent converges to incorrect
+    """distance_sum = 0
+    for food in foodGrid.asList():
+        distance_sum += abs(position[0] - food[0]) + abs(position[1] - food[1])
+    return math.log(distance_sum, 1.7)  if distance_sum >= 2 else foodGrid.count()"""
+
 
 class ClosestDotSearchAgent(SearchAgent):
     "Search for all food using a sequence of searches"
