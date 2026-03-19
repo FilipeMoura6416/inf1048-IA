@@ -476,12 +476,12 @@ def foodHeuristic(state, problem):
     return float(distance_sum)/food_count if food_count > 0 else 0"""
 
     ##Fourth heuristic: most distant food
-    ##Problem Correct but not efficient
-    """distance_max = 0
+    ##Problem Correct but not efficient expanded nodes: 9928
+    distance_max = 0
     for food in foodGrid.asList():
         distance = abs(position[0] - food[0]) + abs(position[1] - food[1])
         distance_max = distance if distance > distance_max else distance_max
-    return distance_max"""
+    return distance_max
 
     ##Fifth heuristic: euclidian distance sum of all foods
     ##Problem: efficient but not correct  expanded nodes: 5716
@@ -491,7 +491,7 @@ def foodHeuristic(state, problem):
     return distance_sum"""
 
     ##Sixth heuritic: euclidian distance sum of all foods diveded by the number os foods
-    ##Problem: correct but not efficient 
+    ##Problem: correct but not efficient expanded nodes: 11896
     """distance_sum = 0
     food_count = foodGrid.count()
     for food in foodGrid.asList():
@@ -559,7 +559,8 @@ def foodHeuristic(state, problem):
     return math.log(distance_sum, 1.7)  if distance_sum >= 2 else foodGrid.count()"""
 
     ##Fourteenth heuristic: averange of the distances of the nearest and farthest food 
-    distance_max = 0
+    ##Correct but not efficient: expanded nodes: 11262
+    """distance_max = 0
     distance_min = float('inf')
     food_count = 0
     for food in foodGrid.asList():
@@ -572,7 +573,19 @@ def foodHeuristic(state, problem):
     elif food_count == 1:
         return distance_max
     else: 
-        return (distance_max + distance_min)/2
+        return (distance_max + distance_min)/2"""
+    
+    ##Fifteenth heuristic: Food_count and farthest food
+    ##Correct but expanded nodes: 10454
+    distance_max = 0
+    distance_sum = 0
+    food_count = 0
+    for food in foodGrid.asList():
+        distance = abs(position[0] - food[0]) + abs(position[1] - food[1])
+        distance_sum += distance
+        distance_max = distance if distance > distance_max else distance_max
+        food_count += 1
+    return (0.41*distance_max + 0.59*(distance_sum/food_count)) if food_count > 0 else 0
 
 class ClosestDotSearchAgent(SearchAgent):
     "Search for all food using a sequence of searches"
@@ -601,9 +614,8 @@ class ClosestDotSearchAgent(SearchAgent):
         food = gameState.getFood()
         walls = gameState.getWalls()
         problem = AnyFoodSearchProblem(gameState)
-
-        "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        actions = search.uniformCostSearch(problem)
+        return actions
 
 class AnyFoodSearchProblem(PositionSearchProblem):
     """
@@ -637,9 +649,26 @@ class AnyFoodSearchProblem(PositionSearchProblem):
         complete the problem definition.
         """
         x,y = state
+        if self.food[x][y]:
+            return True
+        else:
+            return False
+    
+    def getStartState(self):
+        return self.startState
+    
+    def getSuccessors(self, state):
+        "Returns successor states, the actions they require, and a cost of 1."
+        successors = []
+        self._expanded += 1 # DO NOT CHANGE
+        for direction in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
+            x,y = state
+            dx, dy = Actions.directionToVector(direction)
+            nextx, nexty = int(x + dx), int(y + dy)
+            if not self.walls[nextx][nexty]:
+                successors.append( ( ((nextx, nexty)), direction, 1) )
+        return successors
 
-        "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
 
 def mazeDistance(point1, point2, gameState):
     """

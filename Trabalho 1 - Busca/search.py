@@ -205,7 +205,8 @@ def uniformCostSearch(problem: SearchProblem):
                     nodo_sucessor.action = sucessor[1]
                     ##print("Nodo antecessor", atual.state)
                     if problem.isGoalState(nodo_sucessor.state):
-                        goalState = nodo_sucessor
+                        if nodo_sucessor.acumulated_cost < goalState.acumulated_cost:
+                            goalState = nodo_sucessor
                         ##print("Goal state: ", goalState.state, " Antecessor: ", goalState.previous_state, " Action: ", goalState.action)
                     else:
                         pq.push(nodo_sucessor, nodo_sucessor.acumulated_cost)
@@ -274,7 +275,8 @@ def aStarSearch(problem, heuristic=nullHeuristic):
                     nodo_sucessor.action = sucessor[1]
                     ##print("Nodo antecessor", atual.state)
                     if problem.isGoalState(nodo_sucessor.state):
-                        goalState = nodo_sucessor
+                        if nodo_sucessor.acumulated_cost < goalState.acumulated_cost:
+                            goalState = nodo_sucessor
                         ##print("Goal state: ", goalState.state, " Antecessor: ", goalState.previous_state, " Action: ", goalState.action)
                     else:
                         pq.push(nodo_sucessor, nodo_sucessor.acumulated_cost + nodo_sucessor.heuristic_value)
