@@ -558,6 +558,21 @@ def foodHeuristic(state, problem):
         distance_sum += abs(position[0] - food[0]) + abs(position[1] - food[1])
     return math.log(distance_sum, 1.7)  if distance_sum >= 2 else foodGrid.count()"""
 
+    ##Fourteenth heuristic: averange of the distances of the nearest and farthest food 
+    distance_max = 0
+    distance_min = float('inf')
+    food_count = 0
+    for food in foodGrid.asList():
+        distance = abs(position[0] - food[0]) + abs(position[1] - food[1])
+        distance_max = distance if distance > distance_max else distance_max
+        distance_min = distance if distance < distance_min else distance_min
+        food_count += 1
+    if food_count == 0:
+        return 0
+    elif food_count == 1:
+        return distance_max
+    else: 
+        return (distance_max + distance_min)/2
 
 class ClosestDotSearchAgent(SearchAgent):
     "Search for all food using a sequence of searches"
