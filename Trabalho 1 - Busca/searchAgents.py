@@ -37,6 +37,7 @@ Good luck and happy searching!
 from game import Directions
 from game import Agent
 from game import Actions
+from types import SimpleNamespace
 import util
 import time
 import search
@@ -477,11 +478,11 @@ def foodHeuristic(state, problem):
 
     ##Fourth heuristic: most distant food
     ##Problem Correct but not efficient expanded nodes: 9928
-    distance_max = 0
+    """distance_max = 0
     for food in foodGrid.asList():
         distance = abs(position[0] - food[0]) + abs(position[1] - food[1])
         distance_max = distance if distance > distance_max else distance_max
-    return distance_max
+    return distance_max"""
 
     ##Fifth heuristic: euclidian distance sum of all foods
     ##Problem: efficient but not correct  expanded nodes: 5716
@@ -577,7 +578,7 @@ def foodHeuristic(state, problem):
     
     ##Fifteenth heuristic: Food_count and farthest food
     ##Correct but expanded nodes: 10454
-    distance_max = 0
+    """distance_max = 0
     distance_sum = 0
     food_count = 0
     for food in foodGrid.asList():
@@ -585,7 +586,68 @@ def foodHeuristic(state, problem):
         distance_sum += distance
         distance_max = distance if distance > distance_max else distance_max
         food_count += 1
-    return (0.41*distance_max + 0.59*(distance_sum/food_count)) if food_count > 0 else 0
+    return (0.41*distance_max + 0.59*(distance_sum/food_count)) if food_count > 0 else 0"""
+
+    ##Sixteenth heuristic: MST
+    ##Inicializar reached com pacman position
+    ##Grid auxiliar
+    ##Enquanto to_reach not empty
+        ##Para cada reached
+            ##Chamar anyfoodproblem
+        ##Escolher menor custo
+        ##Adicionar em reached
+        ##Remover comida selecionada do grid auxiliar
+
+    ##Preciso criar um gamestate para chamar find path
+    ##print("\n\n\n\n\n\n\n\n\nFood heuristic //////////////////////////////////////////////////////////////////////////////////")
+    to_reach:list = foodGrid.asList()
+    food_count = len(to_reach)
+    if food_count > 0:
+        recheads = []
+        ##print("Position: ", position)
+        recheads.append(to_reach.pop())
+        grid_aux = foodGrid.copy()
+        grid_aux[recheads[0][0]][recheads[0][1]] = False
+        MST_weight = 0
+        while len(to_reach) > 0:
+            chosed = [float('inf'), (0, 0), (0, 0), []]
+            for rechead in recheads:
+                ##print("Analisando rechead: ", rechead)
+                fakeGameState = SimpleNamespace(
+                    getFood=lambda: grid_aux,
+                    getWalls=lambda: problem.walls,
+                    getPacmanPosition=lambda: rechead
+                )
+                ##print("Comidas: ", grid_aux.asList())
+                prob = AnyFoodSearchProblem(fakeGameState)
+                result = search.UCS_find_closest(prob)
+                ##print("Result[1]: ", result[1], " len(result[0]): ", len(result[0]), " Origem rechead: ", rechead)
+                
+                if len(result[0]) < chosed[0]:
+                    chosed[0] = len(result[0])
+                    chosed[1] = result[1]
+                    chosed[2] = rechead
+                    chosed[3] = result[0]
+            recheads.append(chosed[1])
+            ##print("----------Chesed[0]: ", chosed[0], " Origem: ", chosed[2], "Destino: ", chosed[1])
+            ##print("-Caminho: ", chosed[3])
+            MST_weight += chosed[0]
+            to_reach.remove(chosed[1])
+            grid_aux[chosed[1][0]][chosed[1][1]] = False
+        fakeGameState = SimpleNamespace(
+            getFood=lambda: foodGrid,
+            getWalls=lambda: problem.walls,
+            getPacmanPosition=lambda: position
+            )
+        prob = AnyFoodSearchProblem(fakeGameState)
+        result = search.UCS_find_closest(prob)
+        return MST_weight + len(result[0])
+    else:
+        return 0 
+
+
+
+
 
 class ClosestDotSearchAgent(SearchAgent):
     "Search for all food using a sequence of searches"
@@ -610,9 +672,6 @@ class ClosestDotSearchAgent(SearchAgent):
         gameState.
         """
         # Here are some useful elements of the startState
-        startPosition = gameState.getPacmanPosition()
-        food = gameState.getFood()
-        walls = gameState.getWalls()
         problem = AnyFoodSearchProblem(gameState)
         actions = search.uniformCostSearch(problem)
         return actions
