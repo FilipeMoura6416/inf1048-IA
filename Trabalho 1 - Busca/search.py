@@ -18,7 +18,7 @@ Pacman agents (in searchAgents.py).
 """
 
 import util
-
+from collections import deque
 class SearchProblem:
     """
     This class outlines the structure of a search problem, but doesn't implement
@@ -109,10 +109,10 @@ def depthFirstSearch(problem):
     first_node=  NodoGameTree(problem.getStartState(), None, None, None, 0)
     dicionario[first_node.state] = first_node
     stack.push(first_node)
-    current_node =  first_node 
-    while not stack.isEmpty() and not problem.isGoalState(current_node.state):
+    while not stack.isEmpty():
         current_node = stack.pop()
-        current_node.analisado =  True
+        if problem.isGoalState(current_node.state):
+            break
         for sucessor in problem.getSuccessors(current_node.state):
             if sucessor[0] not  in dicionario:
                 new_node =  NodoGameTree(sucessor[0], sucessor[1], sucessor[2], current_node.state, current_node.acumulated_cost + sucessor[2], False)
@@ -133,29 +133,37 @@ def breadthFirstSearch(problem):
             self.acumulated_cost = acumulated_cost
             self.cost = cost
     
-    def create_action_list(action_list: list, dicionario:dict,  nodo: NodoGameTree):
+    def create_action_list(dicionario:dict,  nodo: NodoGameTree):
+        action_list =  deque()
+        while(nodo.state != problem.getStartState()):
+            action_list.appendleft(nodo.action)
+            nodo  = dicionario[nodo.previous_state]
+        return list(action_list)
+        print(nodo.previous_state)
         if nodo.previous_state != None:
             create_action_list(action_list, dicionario, dicionario[nodo.previous_state])
             action_list.append(nodo.action)
         return action_list
     
-    
+
     dicionario = dict()
-    queue = util.Queue()
+    queue = util.Queue() 
     first_node=  NodoGameTree(problem.getStartState(), None, None, None, 0)
     dicionario[first_node.state] = first_node
     queue.push(first_node)
     current_node =  first_node 
-    while not queue.isEmpty() and not problem.isGoalState(current_node.state):
+    while not queue.isEmpty(): #por algum motivo, quando eu testo se current_node é o goal state no while, eu visito um node adicional, o que falha o teste no autograder
         current_node = queue.pop()
+        if problem.isGoalState(current_node.state):
+            break
         current_node.analisado =  True
         for sucessor in problem.getSuccessors(current_node.state):
             if sucessor[0] not  in dicionario:
                 new_node =  NodoGameTree(sucessor[0], sucessor[1], sucessor[2], current_node.state, current_node.acumulated_cost + sucessor[2], False)
                 dicionario[new_node.state] = new_node
                 queue.push(new_node)
-    
-    action_list = create_action_list(list(), dicionario, current_node)
+
+    action_list = create_action_list( dicionario, current_node)
     return action_list
 
 class NodoGameTree:
