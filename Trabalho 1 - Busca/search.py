@@ -139,13 +139,9 @@ def breadthFirstSearch(problem):
             action_list.appendleft(nodo.action)
             nodo  = dicionario[nodo.previous_state]
         return list(action_list)
-        print(nodo.previous_state)
-        if nodo.previous_state != None:
-            create_action_list(action_list, dicionario, dicionario[nodo.previous_state])
-            action_list.append(nodo.action)
-        return action_list
-    
 
+    
+    
     dicionario = dict()
     queue = util.Queue() 
     first_node=  NodoGameTree(problem.getStartState(), None, None, None, 0)

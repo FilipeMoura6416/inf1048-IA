@@ -294,18 +294,19 @@ class CornersProblem(search.SearchProblem):
         # in initializing the problem
         
 
+        
     def getStartState(self):
         """
         Returns the start state (in your state space, not the full Pacman state
         space)
         """
-        return self.startingPosition
+        return (self.startingPosition, frozenset(self.corners_to_visit))
 
     def isGoalState(self, state):
         """
         Returns whether this search state is a goal state of the problem.
         """
-        if len(self.corners_to_visit) == 0:
+        if len(state[1]) == 0:
             return True
 
     def getSuccessors(self, state):
@@ -318,17 +319,22 @@ class CornersProblem(search.SearchProblem):
             state, 'action' is the action required to get there, and 'stepCost'
             is the incremental cost of expanding to that successor
         """
-
+        x,y = state[0]
         successors = []
         for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
             # Add a successor state to the successor list if the action is legal
             # Here's a code snippet for figuring out whether a new position hits a wall:
-            #   x,y = currentPosition
-            #   dx, dy = Actions.directionToVector(action)
-            #   nextx, nexty = int(x + dx), int(y + dy)
-            #   hitsWall = self.walls[nextx][nexty]
+               dx, dy = Actions.directionToVector(action)
+               nextx, nexty = int(x + dx), int(y + dy)
+               hitsWall = self.walls[nextx][nexty]
+               if not hitsWall:
+                     if (nextx, nexty) in self.corners_to_visit:
+                        corners_remaining =  frozenset(c for c in state[1] if c != (nextx, nexty))
+                     else:
+                        corners_remaining = state[1]                     
+                     successor_state = ( (nextx, nexty), corners_remaining )
+                     successors.append( ( successor_state, action, 1) )
 
-            "*** YOUR CODE HERE ***"
 
         self._expanded += 1 # DO NOT CHANGE
         return successors
