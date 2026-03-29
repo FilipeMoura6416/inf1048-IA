@@ -1,0 +1,1921 @@
+current_node: A
+sucessor: B previous: A action: 0:A->B
+Alterado sucessor: B previous: A action: 0:A->B
+sucessor: C previous: A action: 1:A->C
+Alterado sucessor: C previous: A action: 1:A->C
+sucessor: D previous: A action: 2:A->D
+Alterado sucessor: D previous: A action: 2:A->D
+current_node: D
+current_node: C
+sucessor: G previous: C action: 0:C->G
+Alterado sucessor: G previous: C action: 0:C->G
+current_node: G
+State: G action: 0:C->G
+State: C action: 1:A->C
+State: A action: None
+None 1:A->C 0:C->G 
+
+current_node: A
+sucessor: B previous: A action: 0:A->B
+Alterado sucessor: B previous: A action: 0:A->B
+sucessor: G previous: A action: 1:A->G
+Alterado sucessor: G previous: A action: 1:A->G
+sucessor: D previous: A action: 2:A->D
+Alterado sucessor: D previous: A action: 2:A->D
+current_node: D
+sucessor: G previous: A action: 1:A->G
+Alterado sucessor: G previous: D action: 0:D->G
+current_node: G
+State: G action: 0:D->G
+State: D action: 2:A->D
+State: A action: None
+None 2:A->D 0:D->G 
+
+current_node: A
+sucessor: B previous: A action: 0:A->B
+Alterado sucessor: B previous: A action: 0:A->B
+current_node: B
+sucessor: A previous: None action: None
+Alterado sucessor: A previous: None action: None
+sucessor: C previous: B action: 1:B->C
+Alterado sucessor: C previous: B action: 1:B->C
+current_node: C
+sucessor: A previous: None action: None
+Alterado sucessor: A previous: None action: None
+sucessor: G previous: C action: 1:C->G
+Alterado sucessor: G previous: C action: 1:C->G
+sucessor: B previous: A action: 0:A->B
+Alterado sucessor: B previous: A action: 0:A->B
+current_node: G
+State: G action: 1:C->G
+State: C action: 1:B->C
+State: B action: 0:A->B
+State: A action: None
+None 0:A->B 1:B->C 1:C->G 
+
+current_node: A
+sucessor: B1 previous: A action: 0:A->B1
+Alterado sucessor: B1 previous: A action: 0:A->B1
+sucessor: C previous: A action: 1:A->C
+Alterado sucessor: C previous: A action: 1:A->C
+sucessor: B2 previous: A action: 2:A->B2
+Alterado sucessor: B2 previous: A action: 2:A->B2
+current_node: B2
+sucessor: C previous: A action: 1:A->C
+Alterado sucessor: C previous: B2 action: 0:B2->C
+current_node: C
+sucessor: D previous: C action: 0:C->D
+Alterado sucessor: D previous: C action: 0:C->D
+current_node: D
+sucessor: E1 previous: D action: 0:D->E1
+Alterado sucessor: E1 previous: D action: 0:D->E1
+sucessor: F previous: D action: 1:D->F
+Alterado sucessor: F previous: D action: 1:D->F
+sucessor: E2 previous: D action: 2:D->E2
+Alterado sucessor: E2 previous: D action: 2:D->E2
+current_node: E2
+sucessor: F previous: D action: 1:D->F
+Alterado sucessor: F previous: E2 action: 0:E2->F
+current_node: F
+sucessor: G previous: F action: 0:F->G
+Alterado sucessor: G previous: F action: 0:F->G
+current_node: G
+State: G action: 0:F->G
+State: F action: 0:E2->F
+State: E2 action: 2:D->E2
+State: D action: 0:C->D
+State: C action: 0:B2->C
+State: B2 action: 2:A->B2
+State: A action: None
+None 2:A->B2 0:B2->C 0:C->D 2:D->E2 0:E2->F 0:F->G 
+
+current_node: (34, 16)
+sucessor: (34, 15) previous: (34, 16) action: South
+Alterado sucessor: (34, 15) previous: (34, 16) action: South
+sucessor: (33, 16) previous: (34, 16) action: West
+Alterado sucessor: (33, 16) previous: (34, 16) action: West
+current_node: (33, 16)
+sucessor: (34, 16) previous: None action: None
+Alterado sucessor: (34, 16) previous: None action: None
+sucessor: (32, 16) previous: (33, 16) action: West
+Alterado sucessor: (32, 16) previous: (33, 16) action: West
+current_node: (32, 16)
+sucessor: (33, 16) previous: (34, 16) action: West
+Alterado sucessor: (33, 16) previous: (34, 16) action: West
+sucessor: (31, 16) previous: (32, 16) action: West
+Alterado sucessor: (31, 16) previous: (32, 16) action: West
+current_node: (31, 16)
+sucessor: (32, 16) previous: (33, 16) action: West
+Alterado sucessor: (32, 16) previous: (33, 16) action: West
+sucessor: (30, 16) previous: (31, 16) action: West
+Alterado sucessor: (30, 16) previous: (31, 16) action: West
+current_node: (30, 16)
+sucessor: (31, 16) previous: (32, 16) action: West
+Alterado sucessor: (31, 16) previous: (32, 16) action: West
+sucessor: (29, 16) previous: (30, 16) action: West
+Alterado sucessor: (29, 16) previous: (30, 16) action: West
+current_node: (29, 16)
+sucessor: (30, 16) previous: (31, 16) action: West
+Alterado sucessor: (30, 16) previous: (31, 16) action: West
+sucessor: (28, 16) previous: (29, 16) action: West
+Alterado sucessor: (28, 16) previous: (29, 16) action: West
+current_node: (28, 16)
+sucessor: (29, 16) previous: (30, 16) action: West
+Alterado sucessor: (29, 16) previous: (30, 16) action: West
+sucessor: (27, 16) previous: (28, 16) action: West
+Alterado sucessor: (27, 16) previous: (28, 16) action: West
+current_node: (27, 16)
+sucessor: (28, 16) previous: (29, 16) action: West
+Alterado sucessor: (28, 16) previous: (29, 16) action: West
+sucessor: (26, 16) previous: (27, 16) action: West
+Alterado sucessor: (26, 16) previous: (27, 16) action: West
+current_node: (26, 16)
+sucessor: (27, 16) previous: (28, 16) action: West
+Alterado sucessor: (27, 16) previous: (28, 16) action: West
+sucessor: (25, 16) previous: (26, 16) action: West
+Alterado sucessor: (25, 16) previous: (26, 16) action: West
+current_node: (25, 16)
+sucessor: (25, 15) previous: (25, 16) action: South
+Alterado sucessor: (25, 15) previous: (25, 16) action: South
+sucessor: (26, 16) previous: (27, 16) action: West
+Alterado sucessor: (26, 16) previous: (27, 16) action: West
+sucessor: (24, 16) previous: (25, 16) action: West
+Alterado sucessor: (24, 16) previous: (25, 16) action: West
+current_node: (24, 16)
+sucessor: (25, 16) previous: (26, 16) action: West
+Alterado sucessor: (25, 16) previous: (26, 16) action: West
+sucessor: (23, 16) previous: (24, 16) action: West
+Alterado sucessor: (23, 16) previous: (24, 16) action: West
+current_node: (23, 16)
+sucessor: (24, 16) previous: (25, 16) action: West
+Alterado sucessor: (24, 16) previous: (25, 16) action: West
+sucessor: (22, 16) previous: (23, 16) action: West
+Alterado sucessor: (22, 16) previous: (23, 16) action: West
+current_node: (22, 16)
+sucessor: (23, 16) previous: (24, 16) action: West
+Alterado sucessor: (23, 16) previous: (24, 16) action: West
+sucessor: (21, 16) previous: (22, 16) action: West
+Alterado sucessor: (21, 16) previous: (22, 16) action: West
+current_node: (21, 16)
+sucessor: (22, 16) previous: (23, 16) action: West
+Alterado sucessor: (22, 16) previous: (23, 16) action: West
+sucessor: (20, 16) previous: (21, 16) action: West
+Alterado sucessor: (20, 16) previous: (21, 16) action: West
+current_node: (20, 16)
+sucessor: (21, 16) previous: (22, 16) action: West
+Alterado sucessor: (21, 16) previous: (22, 16) action: West
+sucessor: (19, 16) previous: (20, 16) action: West
+Alterado sucessor: (19, 16) previous: (20, 16) action: West
+current_node: (19, 16)
+sucessor: (20, 16) previous: (21, 16) action: West
+Alterado sucessor: (20, 16) previous: (21, 16) action: West
+sucessor: (18, 16) previous: (19, 16) action: West
+Alterado sucessor: (18, 16) previous: (19, 16) action: West
+current_node: (18, 16)
+sucessor: (19, 16) previous: (20, 16) action: West
+Alterado sucessor: (19, 16) previous: (20, 16) action: West
+sucessor: (17, 16) previous: (18, 16) action: West
+Alterado sucessor: (17, 16) previous: (18, 16) action: West
+current_node: (17, 16)
+sucessor: (18, 16) previous: (19, 16) action: West
+Alterado sucessor: (18, 16) previous: (19, 16) action: West
+sucessor: (16, 16) previous: (17, 16) action: West
+Alterado sucessor: (16, 16) previous: (17, 16) action: West
+current_node: (16, 16)
+sucessor: (17, 16) previous: (18, 16) action: West
+Alterado sucessor: (17, 16) previous: (18, 16) action: West
+sucessor: (15, 16) previous: (16, 16) action: West
+Alterado sucessor: (15, 16) previous: (16, 16) action: West
+current_node: (15, 16)
+sucessor: (16, 16) previous: (17, 16) action: West
+Alterado sucessor: (16, 16) previous: (17, 16) action: West
+sucessor: (14, 16) previous: (15, 16) action: West
+Alterado sucessor: (14, 16) previous: (15, 16) action: West
+current_node: (14, 16)
+sucessor: (15, 16) previous: (16, 16) action: West
+Alterado sucessor: (15, 16) previous: (16, 16) action: West
+sucessor: (13, 16) previous: (14, 16) action: West
+Alterado sucessor: (13, 16) previous: (14, 16) action: West
+current_node: (13, 16)
+sucessor: (14, 16) previous: (15, 16) action: West
+Alterado sucessor: (14, 16) previous: (15, 16) action: West
+sucessor: (12, 16) previous: (13, 16) action: West
+Alterado sucessor: (12, 16) previous: (13, 16) action: West
+current_node: (12, 16)
+sucessor: (13, 16) previous: (14, 16) action: West
+Alterado sucessor: (13, 16) previous: (14, 16) action: West
+sucessor: (11, 16) previous: (12, 16) action: West
+Alterado sucessor: (11, 16) previous: (12, 16) action: West
+current_node: (11, 16)
+sucessor: (12, 16) previous: (13, 16) action: West
+Alterado sucessor: (12, 16) previous: (13, 16) action: West
+sucessor: (10, 16) previous: (11, 16) action: West
+Alterado sucessor: (10, 16) previous: (11, 16) action: West
+current_node: (10, 16)
+sucessor: (11, 16) previous: (12, 16) action: West
+Alterado sucessor: (11, 16) previous: (12, 16) action: West
+sucessor: (9, 16) previous: (10, 16) action: West
+Alterado sucessor: (9, 16) previous: (10, 16) action: West
+current_node: (9, 16)
+sucessor: (10, 16) previous: (11, 16) action: West
+Alterado sucessor: (10, 16) previous: (11, 16) action: West
+sucessor: (8, 16) previous: (9, 16) action: West
+Alterado sucessor: (8, 16) previous: (9, 16) action: West
+current_node: (8, 16)
+sucessor: (9, 16) previous: (10, 16) action: West
+Alterado sucessor: (9, 16) previous: (10, 16) action: West
+sucessor: (7, 16) previous: (8, 16) action: West
+Alterado sucessor: (7, 16) previous: (8, 16) action: West
+current_node: (7, 16)
+sucessor: (8, 16) previous: (9, 16) action: West
+Alterado sucessor: (8, 16) previous: (9, 16) action: West
+sucessor: (6, 16) previous: (7, 16) action: West
+Alterado sucessor: (6, 16) previous: (7, 16) action: West
+current_node: (6, 16)
+sucessor: (7, 16) previous: (8, 16) action: West
+Alterado sucessor: (7, 16) previous: (8, 16) action: West
+sucessor: (5, 16) previous: (6, 16) action: West
+Alterado sucessor: (5, 16) previous: (6, 16) action: West
+current_node: (5, 16)
+sucessor: (6, 16) previous: (7, 16) action: West
+Alterado sucessor: (6, 16) previous: (7, 16) action: West
+sucessor: (4, 16) previous: (5, 16) action: West
+Alterado sucessor: (4, 16) previous: (5, 16) action: West
+current_node: (4, 16)
+sucessor: (5, 16) previous: (6, 16) action: West
+Alterado sucessor: (5, 16) previous: (6, 16) action: West
+sucessor: (3, 16) previous: (4, 16) action: West
+Alterado sucessor: (3, 16) previous: (4, 16) action: West
+current_node: (3, 16)
+sucessor: (4, 16) previous: (5, 16) action: West
+Alterado sucessor: (4, 16) previous: (5, 16) action: West
+sucessor: (2, 16) previous: (3, 16) action: West
+Alterado sucessor: (2, 16) previous: (3, 16) action: West
+current_node: (2, 16)
+sucessor: (3, 16) previous: (4, 16) action: West
+Alterado sucessor: (3, 16) previous: (4, 16) action: West
+sucessor: (1, 16) previous: (2, 16) action: West
+Alterado sucessor: (1, 16) previous: (2, 16) action: West
+current_node: (1, 16)
+sucessor: (1, 15) previous: (1, 16) action: South
+Alterado sucessor: (1, 15) previous: (1, 16) action: South
+sucessor: (2, 16) previous: (3, 16) action: West
+Alterado sucessor: (2, 16) previous: (3, 16) action: West
+current_node: (1, 15)
+sucessor: (1, 16) previous: (2, 16) action: West
+Alterado sucessor: (1, 16) previous: (2, 16) action: West
+sucessor: (1, 14) previous: (1, 15) action: South
+Alterado sucessor: (1, 14) previous: (1, 15) action: South
+current_node: (1, 14)
+sucessor: (1, 15) previous: (1, 16) action: South
+Alterado sucessor: (1, 15) previous: (1, 16) action: South
+sucessor: (1, 13) previous: (1, 14) action: South
+Alterado sucessor: (1, 13) previous: (1, 14) action: South
+current_node: (1, 13)
+sucessor: (1, 14) previous: (1, 15) action: South
+Alterado sucessor: (1, 14) previous: (1, 15) action: South
+sucessor: (1, 12) previous: (1, 13) action: South
+Alterado sucessor: (1, 12) previous: (1, 13) action: South
+current_node: (1, 12)
+sucessor: (1, 13) previous: (1, 14) action: South
+Alterado sucessor: (1, 13) previous: (1, 14) action: South
+sucessor: (1, 11) previous: (1, 12) action: South
+Alterado sucessor: (1, 11) previous: (1, 12) action: South
+current_node: (1, 11)
+sucessor: (1, 12) previous: (1, 13) action: South
+Alterado sucessor: (1, 12) previous: (1, 13) action: South
+sucessor: (1, 10) previous: (1, 11) action: South
+Alterado sucessor: (1, 10) previous: (1, 11) action: South
+current_node: (1, 10)
+sucessor: (1, 11) previous: (1, 12) action: South
+Alterado sucessor: (1, 11) previous: (1, 12) action: South
+sucessor: (1, 9) previous: (1, 10) action: South
+Alterado sucessor: (1, 9) previous: (1, 10) action: South
+current_node: (1, 9)
+sucessor: (1, 10) previous: (1, 11) action: South
+Alterado sucessor: (1, 10) previous: (1, 11) action: South
+sucessor: (1, 8) previous: (1, 9) action: South
+Alterado sucessor: (1, 8) previous: (1, 9) action: South
+current_node: (1, 8)
+sucessor: (1, 9) previous: (1, 10) action: South
+Alterado sucessor: (1, 9) previous: (1, 10) action: South
+sucessor: (1, 7) previous: (1, 8) action: South
+Alterado sucessor: (1, 7) previous: (1, 8) action: South
+current_node: (1, 7)
+sucessor: (1, 8) previous: (1, 9) action: South
+Alterado sucessor: (1, 8) previous: (1, 9) action: South
+sucessor: (2, 7) previous: (1, 7) action: East
+Alterado sucessor: (2, 7) previous: (1, 7) action: East
+current_node: (2, 7)
+sucessor: (3, 7) previous: (2, 7) action: East
+Alterado sucessor: (3, 7) previous: (2, 7) action: East
+sucessor: (1, 7) previous: (1, 8) action: South
+Alterado sucessor: (1, 7) previous: (1, 8) action: South
+current_node: (3, 7)
+sucessor: (4, 7) previous: (3, 7) action: East
+Alterado sucessor: (4, 7) previous: (3, 7) action: East
+sucessor: (2, 7) previous: (1, 7) action: East
+Alterado sucessor: (2, 7) previous: (1, 7) action: East
+current_node: (4, 7)
+sucessor: (4, 8) previous: (4, 7) action: North
+Alterado sucessor: (4, 8) previous: (4, 7) action: North
+sucessor: (3, 7) previous: (2, 7) action: East
+Alterado sucessor: (3, 7) previous: (2, 7) action: East
+current_node: (4, 8)
+sucessor: (4, 9) previous: (4, 8) action: North
+Alterado sucessor: (4, 9) previous: (4, 8) action: North
+sucessor: (4, 7) previous: (3, 7) action: East
+Alterado sucessor: (4, 7) previous: (3, 7) action: East
+current_node: (4, 9)
+sucessor: (4, 10) previous: (4, 9) action: North
+Alterado sucessor: (4, 10) previous: (4, 9) action: North
+sucessor: (4, 8) previous: (4, 7) action: North
+Alterado sucessor: (4, 8) previous: (4, 7) action: North
+current_node: (4, 10)
+sucessor: (4, 11) previous: (4, 10) action: North
+Alterado sucessor: (4, 11) previous: (4, 10) action: North
+sucessor: (4, 9) previous: (4, 8) action: North
+Alterado sucessor: (4, 9) previous: (4, 8) action: North
+sucessor: (3, 10) previous: (4, 10) action: West
+Alterado sucessor: (3, 10) previous: (4, 10) action: West
+current_node: (3, 10)
+sucessor: (4, 10) previous: (4, 9) action: North
+Alterado sucessor: (4, 10) previous: (4, 9) action: North
+current_node: (4, 11)
+sucessor: (4, 12) previous: (4, 11) action: North
+Alterado sucessor: (4, 12) previous: (4, 11) action: North
+sucessor: (4, 10) previous: (4, 9) action: North
+Alterado sucessor: (4, 10) previous: (4, 9) action: North
+current_node: (4, 12)
+sucessor: (4, 13) previous: (4, 12) action: North
+Alterado sucessor: (4, 13) previous: (4, 12) action: North
+sucessor: (4, 11) previous: (4, 10) action: North
+Alterado sucessor: (4, 11) previous: (4, 10) action: North
+current_node: (4, 13)
+sucessor: (4, 14) previous: (4, 13) action: North
+Alterado sucessor: (4, 14) previous: (4, 13) action: North
+sucessor: (4, 12) previous: (4, 11) action: North
+Alterado sucessor: (4, 12) previous: (4, 11) action: North
+current_node: (4, 14)
+sucessor: (4, 13) previous: (4, 12) action: North
+Alterado sucessor: (4, 13) previous: (4, 12) action: North
+sucessor: (5, 14) previous: (4, 14) action: East
+Alterado sucessor: (5, 14) previous: (4, 14) action: East
+current_node: (5, 14)
+sucessor: (6, 14) previous: (5, 14) action: East
+Alterado sucessor: (6, 14) previous: (5, 14) action: East
+sucessor: (4, 14) previous: (4, 13) action: North
+Alterado sucessor: (4, 14) previous: (4, 13) action: North
+current_node: (6, 14)
+sucessor: (6, 13) previous: (6, 14) action: South
+Alterado sucessor: (6, 13) previous: (6, 14) action: South
+sucessor: (5, 14) previous: (4, 14) action: East
+Alterado sucessor: (5, 14) previous: (4, 14) action: East
+current_node: (6, 13)
+sucessor: (6, 14) previous: (5, 14) action: East
+Alterado sucessor: (6, 14) previous: (5, 14) action: East
+sucessor: (6, 12) previous: (6, 13) action: South
+Alterado sucessor: (6, 12) previous: (6, 13) action: South
+current_node: (6, 12)
+sucessor: (6, 13) previous: (6, 14) action: South
+Alterado sucessor: (6, 13) previous: (6, 14) action: South
+sucessor: (6, 11) previous: (6, 12) action: South
+Alterado sucessor: (6, 11) previous: (6, 12) action: South
+current_node: (6, 11)
+sucessor: (6, 12) previous: (6, 13) action: South
+Alterado sucessor: (6, 12) previous: (6, 13) action: South
+sucessor: (6, 10) previous: (6, 11) action: South
+Alterado sucessor: (6, 10) previous: (6, 11) action: South
+current_node: (6, 10)
+sucessor: (6, 11) previous: (6, 12) action: South
+Alterado sucessor: (6, 11) previous: (6, 12) action: South
+sucessor: (6, 9) previous: (6, 10) action: South
+Alterado sucessor: (6, 9) previous: (6, 10) action: South
+current_node: (6, 9)
+sucessor: (6, 10) previous: (6, 11) action: South
+Alterado sucessor: (6, 10) previous: (6, 11) action: South
+sucessor: (6, 8) previous: (6, 9) action: South
+Alterado sucessor: (6, 8) previous: (6, 9) action: South
+current_node: (6, 8)
+sucessor: (6, 9) previous: (6, 10) action: South
+Alterado sucessor: (6, 9) previous: (6, 10) action: South
+sucessor: (7, 8) previous: (6, 8) action: East
+Alterado sucessor: (7, 8) previous: (6, 8) action: East
+current_node: (7, 8)
+sucessor: (8, 8) previous: (7, 8) action: East
+Alterado sucessor: (8, 8) previous: (7, 8) action: East
+sucessor: (6, 8) previous: (6, 9) action: South
+Alterado sucessor: (6, 8) previous: (6, 9) action: South
+current_node: (8, 8)
+sucessor: (8, 9) previous: (8, 8) action: North
+Alterado sucessor: (8, 9) previous: (8, 8) action: North
+sucessor: (7, 8) previous: (6, 8) action: East
+Alterado sucessor: (7, 8) previous: (6, 8) action: East
+current_node: (8, 9)
+sucessor: (8, 10) previous: (8, 9) action: North
+Alterado sucessor: (8, 10) previous: (8, 9) action: North
+sucessor: (8, 8) previous: (7, 8) action: East
+Alterado sucessor: (8, 8) previous: (7, 8) action: East
+current_node: (8, 10)
+sucessor: (8, 11) previous: (8, 10) action: North
+Alterado sucessor: (8, 11) previous: (8, 10) action: North
+sucessor: (8, 9) previous: (8, 8) action: North
+Alterado sucessor: (8, 9) previous: (8, 8) action: North
+current_node: (8, 11)
+sucessor: (8, 12) previous: (8, 11) action: North
+Alterado sucessor: (8, 12) previous: (8, 11) action: North
+sucessor: (8, 10) previous: (8, 9) action: North
+Alterado sucessor: (8, 10) previous: (8, 9) action: North
+current_node: (8, 12)
+sucessor: (8, 13) previous: (8, 12) action: North
+Alterado sucessor: (8, 13) previous: (8, 12) action: North
+sucessor: (8, 11) previous: (8, 10) action: North
+Alterado sucessor: (8, 11) previous: (8, 10) action: North
+current_node: (8, 13)
+sucessor: (8, 14) previous: (8, 13) action: North
+Alterado sucessor: (8, 14) previous: (8, 13) action: North
+sucessor: (8, 12) previous: (8, 11) action: North
+Alterado sucessor: (8, 12) previous: (8, 11) action: North
+current_node: (8, 14)
+sucessor: (8, 13) previous: (8, 12) action: North
+Alterado sucessor: (8, 13) previous: (8, 12) action: North
+sucessor: (9, 14) previous: (8, 14) action: East
+Alterado sucessor: (9, 14) previous: (8, 14) action: East
+current_node: (9, 14)
+sucessor: (10, 14) previous: (9, 14) action: East
+Alterado sucessor: (10, 14) previous: (9, 14) action: East
+sucessor: (8, 14) previous: (8, 13) action: North
+Alterado sucessor: (8, 14) previous: (8, 13) action: North
+current_node: (10, 14)
+sucessor: (10, 13) previous: (10, 14) action: South
+Alterado sucessor: (10, 13) previous: (10, 14) action: South
+sucessor: (9, 14) previous: (8, 14) action: East
+Alterado sucessor: (9, 14) previous: (8, 14) action: East
+current_node: (10, 13)
+sucessor: (10, 14) previous: (9, 14) action: East
+Alterado sucessor: (10, 14) previous: (9, 14) action: East
+sucessor: (10, 12) previous: (10, 13) action: South
+Alterado sucessor: (10, 12) previous: (10, 13) action: South
+current_node: (10, 12)
+sucessor: (10, 13) previous: (10, 14) action: South
+Alterado sucessor: (10, 13) previous: (10, 14) action: South
+sucessor: (10, 11) previous: (10, 12) action: South
+Alterado sucessor: (10, 11) previous: (10, 12) action: South
+current_node: (10, 11)
+sucessor: (10, 12) previous: (10, 13) action: South
+Alterado sucessor: (10, 12) previous: (10, 13) action: South
+sucessor: (10, 10) previous: (10, 11) action: South
+Alterado sucessor: (10, 10) previous: (10, 11) action: South
+current_node: (10, 10)
+sucessor: (10, 11) previous: (10, 12) action: South
+Alterado sucessor: (10, 11) previous: (10, 12) action: South
+sucessor: (11, 10) previous: (10, 10) action: East
+Alterado sucessor: (11, 10) previous: (10, 10) action: East
+current_node: (11, 10)
+sucessor: (12, 10) previous: (11, 10) action: East
+Alterado sucessor: (12, 10) previous: (11, 10) action: East
+sucessor: (10, 10) previous: (10, 11) action: South
+Alterado sucessor: (10, 10) previous: (10, 11) action: South
+current_node: (12, 10)
+sucessor: (12, 11) previous: (12, 10) action: North
+Alterado sucessor: (12, 11) previous: (12, 10) action: North
+sucessor: (11, 10) previous: (10, 10) action: East
+Alterado sucessor: (11, 10) previous: (10, 10) action: East
+current_node: (12, 11)
+sucessor: (12, 12) previous: (12, 11) action: North
+Alterado sucessor: (12, 12) previous: (12, 11) action: North
+sucessor: (12, 10) previous: (11, 10) action: East
+Alterado sucessor: (12, 10) previous: (11, 10) action: East
+current_node: (12, 12)
+sucessor: (12, 13) previous: (12, 12) action: North
+Alterado sucessor: (12, 13) previous: (12, 12) action: North
+sucessor: (12, 11) previous: (12, 10) action: North
+Alterado sucessor: (12, 11) previous: (12, 10) action: North
+sucessor: (13, 12) previous: (12, 12) action: East
+Alterado sucessor: (13, 12) previous: (12, 12) action: East
+current_node: (13, 12)
+sucessor: (14, 12) previous: (13, 12) action: East
+Alterado sucessor: (14, 12) previous: (13, 12) action: East
+sucessor: (12, 12) previous: (12, 11) action: North
+Alterado sucessor: (12, 12) previous: (12, 11) action: North
+current_node: (14, 12)
+sucessor: (14, 11) previous: (14, 12) action: South
+Alterado sucessor: (14, 11) previous: (14, 12) action: South
+sucessor: (15, 12) previous: (14, 12) action: East
+Alterado sucessor: (15, 12) previous: (14, 12) action: East
+sucessor: (13, 12) previous: (12, 12) action: East
+Alterado sucessor: (13, 12) previous: (12, 12) action: East
+current_node: (15, 12)
+sucessor: (16, 12) previous: (15, 12) action: East
+Alterado sucessor: (16, 12) previous: (15, 12) action: East
+sucessor: (14, 12) previous: (13, 12) action: East
+Alterado sucessor: (14, 12) previous: (13, 12) action: East
+current_node: (16, 12)
+sucessor: (17, 12) previous: (16, 12) action: East
+Alterado sucessor: (17, 12) previous: (16, 12) action: East
+sucessor: (15, 12) previous: (14, 12) action: East
+Alterado sucessor: (15, 12) previous: (14, 12) action: East
+current_node: (17, 12)
+sucessor: (17, 13) previous: (17, 12) action: North
+Alterado sucessor: (17, 13) previous: (17, 12) action: North
+sucessor: (18, 12) previous: (17, 12) action: East
+Alterado sucessor: (18, 12) previous: (17, 12) action: East
+sucessor: (16, 12) previous: (15, 12) action: East
+Alterado sucessor: (16, 12) previous: (15, 12) action: East
+current_node: (18, 12)
+sucessor: (19, 12) previous: (18, 12) action: East
+Alterado sucessor: (19, 12) previous: (18, 12) action: East
+sucessor: (17, 12) previous: (16, 12) action: East
+Alterado sucessor: (17, 12) previous: (16, 12) action: East
+current_node: (19, 12)
+sucessor: (19, 11) previous: (19, 12) action: South
+Alterado sucessor: (19, 11) previous: (19, 12) action: South
+sucessor: (20, 12) previous: (19, 12) action: East
+Alterado sucessor: (20, 12) previous: (19, 12) action: East
+sucessor: (18, 12) previous: (17, 12) action: East
+Alterado sucessor: (18, 12) previous: (17, 12) action: East
+current_node: (20, 12)
+sucessor: (20, 11) previous: (20, 12) action: South
+Alterado sucessor: (20, 11) previous: (20, 12) action: South
+sucessor: (21, 12) previous: (20, 12) action: East
+Alterado sucessor: (21, 12) previous: (20, 12) action: East
+sucessor: (19, 12) previous: (18, 12) action: East
+Alterado sucessor: (19, 12) previous: (18, 12) action: East
+current_node: (21, 12)
+sucessor: (22, 12) previous: (21, 12) action: East
+Alterado sucessor: (22, 12) previous: (21, 12) action: East
+sucessor: (20, 12) previous: (19, 12) action: East
+Alterado sucessor: (20, 12) previous: (19, 12) action: East
+current_node: (22, 12)
+sucessor: (23, 12) previous: (22, 12) action: East
+Alterado sucessor: (23, 12) previous: (22, 12) action: East
+sucessor: (21, 12) previous: (20, 12) action: East
+Alterado sucessor: (21, 12) previous: (20, 12) action: East
+current_node: (23, 12)
+sucessor: (24, 12) previous: (23, 12) action: East
+Alterado sucessor: (24, 12) previous: (23, 12) action: East
+sucessor: (22, 12) previous: (21, 12) action: East
+Alterado sucessor: (22, 12) previous: (21, 12) action: East
+current_node: (24, 12)
+sucessor: (24, 11) previous: (24, 12) action: South
+Alterado sucessor: (24, 11) previous: (24, 12) action: South
+sucessor: (23, 12) previous: (22, 12) action: East
+Alterado sucessor: (23, 12) previous: (22, 12) action: East
+current_node: (24, 11)
+sucessor: (24, 12) previous: (23, 12) action: East
+Alterado sucessor: (24, 12) previous: (23, 12) action: East
+sucessor: (25, 11) previous: (24, 11) action: East
+Alterado sucessor: (25, 11) previous: (24, 11) action: East
+current_node: (25, 11)
+sucessor: (26, 11) previous: (25, 11) action: East
+Alterado sucessor: (26, 11) previous: (25, 11) action: East
+sucessor: (24, 11) previous: (24, 12) action: South
+Alterado sucessor: (24, 11) previous: (24, 12) action: South
+current_node: (26, 11)
+sucessor: (27, 11) previous: (26, 11) action: East
+Alterado sucessor: (27, 11) previous: (26, 11) action: East
+sucessor: (25, 11) previous: (24, 11) action: East
+Alterado sucessor: (25, 11) previous: (24, 11) action: East
+current_node: (27, 11)
+sucessor: (27, 12) previous: (27, 11) action: North
+Alterado sucessor: (27, 12) previous: (27, 11) action: North
+sucessor: (26, 11) previous: (25, 11) action: East
+Alterado sucessor: (26, 11) previous: (25, 11) action: East
+current_node: (27, 12)
+sucessor: (27, 13) previous: (27, 12) action: North
+Alterado sucessor: (27, 13) previous: (27, 12) action: North
+sucessor: (27, 11) previous: (26, 11) action: East
+Alterado sucessor: (27, 11) previous: (26, 11) action: East
+current_node: (27, 13)
+sucessor: (27, 14) previous: (27, 13) action: North
+Alterado sucessor: (27, 14) previous: (27, 13) action: North
+sucessor: (27, 12) previous: (27, 11) action: North
+Alterado sucessor: (27, 12) previous: (27, 11) action: North
+current_node: (27, 14)
+sucessor: (27, 13) previous: (27, 12) action: North
+Alterado sucessor: (27, 13) previous: (27, 12) action: North
+sucessor: (26, 14) previous: (27, 14) action: West
+Alterado sucessor: (26, 14) previous: (27, 14) action: West
+current_node: (26, 14)
+sucessor: (27, 14) previous: (27, 13) action: North
+Alterado sucessor: (27, 14) previous: (27, 13) action: North
+sucessor: (25, 14) previous: (26, 14) action: West
+Alterado sucessor: (25, 14) previous: (26, 14) action: West
+current_node: (25, 14)
+sucessor: (25, 15) previous: (25, 16) action: South
+Alterado sucessor: (25, 15) previous: (25, 14) action: North
+sucessor: (26, 14) previous: (27, 14) action: West
+Alterado sucessor: (26, 14) previous: (27, 14) action: West
+current_node: (20, 11)
+sucessor: (20, 12) previous: (19, 12) action: East
+Alterado sucessor: (20, 12) previous: (19, 12) action: East
+sucessor: (20, 10) previous: (20, 11) action: South
+Alterado sucessor: (20, 10) previous: (20, 11) action: South
+sucessor: (19, 11) previous: (19, 12) action: South
+Alterado sucessor: (19, 11) previous: (20, 11) action: West
+current_node: (20, 10)
+sucessor: (20, 11) previous: (20, 12) action: South
+Alterado sucessor: (20, 11) previous: (20, 12) action: South
+sucessor: (20, 9) previous: (20, 10) action: South
+Alterado sucessor: (20, 9) previous: (20, 10) action: South
+current_node: (20, 9)
+sucessor: (20, 10) previous: (20, 11) action: South
+Alterado sucessor: (20, 10) previous: (20, 11) action: South
+sucessor: (21, 9) previous: (20, 9) action: East
+Alterado sucessor: (21, 9) previous: (20, 9) action: East
+current_node: (21, 9)
+sucessor: (22, 9) previous: (21, 9) action: East
+Alterado sucessor: (22, 9) previous: (21, 9) action: East
+sucessor: (20, 9) previous: (20, 10) action: South
+Alterado sucessor: (20, 9) previous: (20, 10) action: South
+current_node: (22, 9)
+sucessor: (23, 9) previous: (22, 9) action: East
+Alterado sucessor: (23, 9) previous: (22, 9) action: East
+sucessor: (21, 9) previous: (20, 9) action: East
+Alterado sucessor: (21, 9) previous: (20, 9) action: East
+current_node: (23, 9)
+sucessor: (24, 9) previous: (23, 9) action: East
+Alterado sucessor: (24, 9) previous: (23, 9) action: East
+sucessor: (22, 9) previous: (21, 9) action: East
+Alterado sucessor: (22, 9) previous: (21, 9) action: East
+current_node: (24, 9)
+sucessor: (25, 9) previous: (24, 9) action: East
+Alterado sucessor: (25, 9) previous: (24, 9) action: East
+sucessor: (23, 9) previous: (22, 9) action: East
+Alterado sucessor: (23, 9) previous: (22, 9) action: East
+current_node: (25, 9)
+sucessor: (26, 9) previous: (25, 9) action: East
+Alterado sucessor: (26, 9) previous: (25, 9) action: East
+sucessor: (24, 9) previous: (23, 9) action: East
+Alterado sucessor: (24, 9) previous: (23, 9) action: East
+current_node: (26, 9)
+sucessor: (27, 9) previous: (26, 9) action: East
+Alterado sucessor: (27, 9) previous: (26, 9) action: East
+sucessor: (25, 9) previous: (24, 9) action: East
+Alterado sucessor: (25, 9) previous: (24, 9) action: East
+current_node: (27, 9)
+sucessor: (27, 8) previous: (27, 9) action: South
+Alterado sucessor: (27, 8) previous: (27, 9) action: South
+sucessor: (26, 9) previous: (25, 9) action: East
+Alterado sucessor: (26, 9) previous: (25, 9) action: East
+current_node: (27, 8)
+sucessor: (27, 9) previous: (26, 9) action: East
+Alterado sucessor: (27, 9) previous: (26, 9) action: East
+sucessor: (27, 7) previous: (27, 8) action: South
+Alterado sucessor: (27, 7) previous: (27, 8) action: South
+current_node: (27, 7)
+sucessor: (27, 8) previous: (27, 9) action: South
+Alterado sucessor: (27, 8) previous: (27, 9) action: South
+sucessor: (27, 6) previous: (27, 7) action: South
+Alterado sucessor: (27, 6) previous: (27, 7) action: South
+current_node: (27, 6)
+sucessor: (27, 7) previous: (27, 8) action: South
+Alterado sucessor: (27, 7) previous: (27, 8) action: South
+sucessor: (27, 5) previous: (27, 6) action: South
+Alterado sucessor: (27, 5) previous: (27, 6) action: South
+current_node: (27, 5)
+sucessor: (27, 6) previous: (27, 7) action: South
+Alterado sucessor: (27, 6) previous: (27, 7) action: South
+sucessor: (27, 4) previous: (27, 5) action: South
+Alterado sucessor: (27, 4) previous: (27, 5) action: South
+current_node: (27, 4)
+sucessor: (27, 5) previous: (27, 6) action: South
+Alterado sucessor: (27, 5) previous: (27, 6) action: South
+sucessor: (27, 3) previous: (27, 4) action: South
+Alterado sucessor: (27, 3) previous: (27, 4) action: South
+current_node: (27, 3)
+sucessor: (27, 4) previous: (27, 5) action: South
+Alterado sucessor: (27, 4) previous: (27, 5) action: South
+sucessor: (27, 2) previous: (27, 3) action: South
+Alterado sucessor: (27, 2) previous: (27, 3) action: South
+current_node: (27, 2)
+sucessor: (27, 3) previous: (27, 4) action: South
+Alterado sucessor: (27, 3) previous: (27, 4) action: South
+sucessor: (27, 1) previous: (27, 2) action: South
+Alterado sucessor: (27, 1) previous: (27, 2) action: South
+sucessor: (26, 2) previous: (27, 2) action: West
+Alterado sucessor: (26, 2) previous: (27, 2) action: West
+current_node: (26, 2)
+sucessor: (27, 2) previous: (27, 3) action: South
+Alterado sucessor: (27, 2) previous: (27, 3) action: South
+sucessor: (25, 2) previous: (26, 2) action: West
+Alterado sucessor: (25, 2) previous: (26, 2) action: West
+current_node: (25, 2)
+sucessor: (26, 2) previous: (27, 2) action: West
+Alterado sucessor: (26, 2) previous: (27, 2) action: West
+sucessor: (24, 2) previous: (25, 2) action: West
+Alterado sucessor: (24, 2) previous: (25, 2) action: West
+current_node: (24, 2)
+sucessor: (25, 2) previous: (26, 2) action: West
+Alterado sucessor: (25, 2) previous: (26, 2) action: West
+sucessor: (23, 2) previous: (24, 2) action: West
+Alterado sucessor: (23, 2) previous: (24, 2) action: West
+current_node: (23, 2)
+sucessor: (24, 2) previous: (25, 2) action: West
+Alterado sucessor: (24, 2) previous: (25, 2) action: West
+sucessor: (22, 2) previous: (23, 2) action: West
+Alterado sucessor: (22, 2) previous: (23, 2) action: West
+current_node: (22, 2)
+sucessor: (23, 2) previous: (24, 2) action: West
+Alterado sucessor: (23, 2) previous: (24, 2) action: West
+sucessor: (21, 2) previous: (22, 2) action: West
+Alterado sucessor: (21, 2) previous: (22, 2) action: West
+current_node: (21, 2)
+sucessor: (22, 2) previous: (23, 2) action: West
+Alterado sucessor: (22, 2) previous: (23, 2) action: West
+sucessor: (20, 2) previous: (21, 2) action: West
+Alterado sucessor: (20, 2) previous: (21, 2) action: West
+current_node: (20, 2)
+sucessor: (21, 2) previous: (22, 2) action: West
+Alterado sucessor: (21, 2) previous: (22, 2) action: West
+sucessor: (19, 2) previous: (20, 2) action: West
+Alterado sucessor: (19, 2) previous: (20, 2) action: West
+current_node: (19, 2)
+sucessor: (20, 2) previous: (21, 2) action: West
+Alterado sucessor: (20, 2) previous: (21, 2) action: West
+sucessor: (18, 2) previous: (19, 2) action: West
+Alterado sucessor: (18, 2) previous: (19, 2) action: West
+current_node: (18, 2)
+sucessor: (19, 2) previous: (20, 2) action: West
+Alterado sucessor: (19, 2) previous: (20, 2) action: West
+sucessor: (17, 2) previous: (18, 2) action: West
+Alterado sucessor: (17, 2) previous: (18, 2) action: West
+current_node: (17, 2)
+sucessor: (18, 2) previous: (19, 2) action: West
+Alterado sucessor: (18, 2) previous: (19, 2) action: West
+sucessor: (16, 2) previous: (17, 2) action: West
+Alterado sucessor: (16, 2) previous: (17, 2) action: West
+current_node: (16, 2)
+sucessor: (17, 2) previous: (18, 2) action: West
+Alterado sucessor: (17, 2) previous: (18, 2) action: West
+sucessor: (15, 2) previous: (16, 2) action: West
+Alterado sucessor: (15, 2) previous: (16, 2) action: West
+current_node: (15, 2)
+sucessor: (15, 3) previous: (15, 2) action: North
+Alterado sucessor: (15, 3) previous: (15, 2) action: North
+sucessor: (16, 2) previous: (17, 2) action: West
+Alterado sucessor: (16, 2) previous: (17, 2) action: West
+sucessor: (14, 2) previous: (15, 2) action: West
+Alterado sucessor: (14, 2) previous: (15, 2) action: West
+current_node: (14, 2)
+sucessor: (15, 2) previous: (16, 2) action: West
+Alterado sucessor: (15, 2) previous: (16, 2) action: West
+sucessor: (13, 2) previous: (14, 2) action: West
+Alterado sucessor: (13, 2) previous: (14, 2) action: West
+current_node: (13, 2)
+sucessor: (14, 2) previous: (15, 2) action: West
+Alterado sucessor: (14, 2) previous: (15, 2) action: West
+sucessor: (12, 2) previous: (13, 2) action: West
+Alterado sucessor: (12, 2) previous: (13, 2) action: West
+current_node: (12, 2)
+sucessor: (13, 2) previous: (14, 2) action: West
+Alterado sucessor: (13, 2) previous: (14, 2) action: West
+sucessor: (11, 2) previous: (12, 2) action: West
+Alterado sucessor: (11, 2) previous: (12, 2) action: West
+current_node: (11, 2)
+sucessor: (12, 2) previous: (13, 2) action: West
+Alterado sucessor: (12, 2) previous: (13, 2) action: West
+sucessor: (10, 2) previous: (11, 2) action: West
+Alterado sucessor: (10, 2) previous: (11, 2) action: West
+current_node: (10, 2)
+sucessor: (10, 1) previous: (10, 2) action: South
+Alterado sucessor: (10, 1) previous: (10, 2) action: South
+sucessor: (11, 2) previous: (12, 2) action: West
+Alterado sucessor: (11, 2) previous: (12, 2) action: West
+current_node: (10, 1)
+sucessor: (10, 2) previous: (11, 2) action: West
+Alterado sucessor: (10, 2) previous: (11, 2) action: West
+sucessor: (9, 1) previous: (10, 1) action: West
+Alterado sucessor: (9, 1) previous: (10, 1) action: West
+current_node: (9, 1)
+sucessor: (10, 1) previous: (10, 2) action: South
+Alterado sucessor: (10, 1) previous: (10, 2) action: South
+sucessor: (8, 1) previous: (9, 1) action: West
+Alterado sucessor: (8, 1) previous: (9, 1) action: West
+current_node: (8, 1)
+sucessor: (9, 1) previous: (10, 1) action: West
+Alterado sucessor: (9, 1) previous: (10, 1) action: West
+sucessor: (7, 1) previous: (8, 1) action: West
+Alterado sucessor: (7, 1) previous: (8, 1) action: West
+current_node: (7, 1)
+sucessor: (8, 1) previous: (9, 1) action: West
+Alterado sucessor: (8, 1) previous: (9, 1) action: West
+sucessor: (6, 1) previous: (7, 1) action: West
+Alterado sucessor: (6, 1) previous: (7, 1) action: West
+current_node: (6, 1)
+sucessor: (7, 1) previous: (8, 1) action: West
+Alterado sucessor: (7, 1) previous: (8, 1) action: West
+sucessor: (5, 1) previous: (6, 1) action: West
+Alterado sucessor: (5, 1) previous: (6, 1) action: West
+current_node: (5, 1)
+sucessor: (6, 1) previous: (7, 1) action: West
+Alterado sucessor: (6, 1) previous: (7, 1) action: West
+sucessor: (4, 1) previous: (5, 1) action: West
+Alterado sucessor: (4, 1) previous: (5, 1) action: West
+current_node: (4, 1)
+sucessor: (5, 1) previous: (6, 1) action: West
+Alterado sucessor: (5, 1) previous: (6, 1) action: West
+sucessor: (3, 1) previous: (4, 1) action: West
+Alterado sucessor: (3, 1) previous: (4, 1) action: West
+current_node: (3, 1)
+sucessor: (4, 1) previous: (5, 1) action: West
+Alterado sucessor: (4, 1) previous: (5, 1) action: West
+sucessor: (2, 1) previous: (3, 1) action: West
+Alterado sucessor: (2, 1) previous: (3, 1) action: West
+current_node: (2, 1)
+sucessor: (3, 1) previous: (4, 1) action: West
+Alterado sucessor: (3, 1) previous: (4, 1) action: West
+sucessor: (1, 1) previous: (2, 1) action: West
+Alterado sucessor: (1, 1) previous: (2, 1) action: West
+current_node: (1, 1)
+State: (1, 1) action: West
+State: (2, 1) action: West
+State: (3, 1) action: West
+State: (4, 1) action: West
+State: (5, 1) action: West
+State: (6, 1) action: West
+State: (7, 1) action: West
+State: (8, 1) action: West
+State: (9, 1) action: West
+State: (10, 1) action: South
+State: (10, 2) action: West
+State: (11, 2) action: West
+State: (12, 2) action: West
+State: (13, 2) action: West
+State: (14, 2) action: West
+State: (15, 2) action: West
+State: (16, 2) action: West
+State: (17, 2) action: West
+State: (18, 2) action: West
+State: (19, 2) action: West
+State: (20, 2) action: West
+State: (21, 2) action: West
+State: (22, 2) action: West
+State: (23, 2) action: West
+State: (24, 2) action: West
+State: (25, 2) action: West
+State: (26, 2) action: West
+State: (27, 2) action: South
+State: (27, 3) action: South
+State: (27, 4) action: South
+State: (27, 5) action: South
+State: (27, 6) action: South
+State: (27, 7) action: South
+State: (27, 8) action: South
+State: (27, 9) action: East
+State: (26, 9) action: East
+State: (25, 9) action: East
+State: (24, 9) action: East
+State: (23, 9) action: East
+State: (22, 9) action: East
+State: (21, 9) action: East
+State: (20, 9) action: South
+State: (20, 10) action: South
+State: (20, 11) action: South
+State: (20, 12) action: East
+State: (19, 12) action: East
+State: (18, 12) action: East
+State: (17, 12) action: East
+State: (16, 12) action: East
+State: (15, 12) action: East
+State: (14, 12) action: East
+State: (13, 12) action: East
+State: (12, 12) action: North
+State: (12, 11) action: North
+State: (12, 10) action: East
+State: (11, 10) action: East
+State: (10, 10) action: South
+State: (10, 11) action: South
+State: (10, 12) action: South
+State: (10, 13) action: South
+State: (10, 14) action: East
+State: (9, 14) action: East
+State: (8, 14) action: North
+State: (8, 13) action: North
+State: (8, 12) action: North
+State: (8, 11) action: North
+State: (8, 10) action: North
+State: (8, 9) action: North
+State: (8, 8) action: East
+State: (7, 8) action: East
+State: (6, 8) action: South
+State: (6, 9) action: South
+State: (6, 10) action: South
+State: (6, 11) action: South
+State: (6, 12) action: South
+State: (6, 13) action: South
+State: (6, 14) action: East
+State: (5, 14) action: East
+State: (4, 14) action: North
+State: (4, 13) action: North
+State: (4, 12) action: North
+State: (4, 11) action: North
+State: (4, 10) action: North
+State: (4, 9) action: North
+State: (4, 8) action: North
+State: (4, 7) action: East
+State: (3, 7) action: East
+State: (2, 7) action: East
+State: (1, 7) action: South
+State: (1, 8) action: South
+State: (1, 9) action: South
+State: (1, 10) action: South
+State: (1, 11) action: South
+State: (1, 12) action: South
+State: (1, 13) action: South
+State: (1, 14) action: South
+State: (1, 15) action: South
+State: (1, 16) action: West
+State: (2, 16) action: West
+State: (3, 16) action: West
+State: (4, 16) action: West
+State: (5, 16) action: West
+State: (6, 16) action: West
+State: (7, 16) action: West
+State: (8, 16) action: West
+State: (9, 16) action: West
+State: (10, 16) action: West
+State: (11, 16) action: West
+State: (12, 16) action: West
+State: (13, 16) action: West
+State: (14, 16) action: West
+State: (15, 16) action: West
+State: (16, 16) action: West
+State: (17, 16) action: West
+State: (18, 16) action: West
+State: (19, 16) action: West
+State: (20, 16) action: West
+State: (21, 16) action: West
+State: (22, 16) action: West
+State: (23, 16) action: West
+State: (24, 16) action: West
+State: (25, 16) action: West
+State: (26, 16) action: West
+State: (27, 16) action: West
+State: (28, 16) action: West
+State: (29, 16) action: West
+State: (30, 16) action: West
+State: (31, 16) action: West
+State: (32, 16) action: West
+State: (33, 16) action: West
+State: (34, 16) action: None
+None West West West West West West West West West West West West West West West West West West West West West West West West West West West West West West West West West South South South South South South South South South East East East North North North North North North North East East South South South South South South East East North North North North North North East East South South South South East East North North East East East East East East East East South South South East East East East East East East South South South South South South South West West West West West West West West West West West West West West West West West South West West West West West West West West West 
+
+current_node: A
+sucessor: B previous: A action: 0:A->B
+Alterado sucessor: B previous: A action: 0:A->B
+sucessor: C previous: A action: 1:A->C
+Alterado sucessor: C previous: A action: 1:A->C
+sucessor: D previous: A action: 2:A->D
+Alterado sucessor: D previous: A action: 2:A->D
+current_node: D
+current_node: C
+sucessor: G previous: C action: 0:C->G
+Alterado sucessor: G previous: C action: 0:C->G
+current_node: G
+State: G action: 0:C->G
+State: C action: 1:A->C
+1:A->C 0:C->G 
+
+current_node: A
+sucessor: B previous: A action: 0:A->B
+Alterado sucessor: B previous: A action: 0:A->B
+sucessor: G previous: A action: 1:A->G
+Alterado sucessor: G previous: A action: 1:A->G
+sucessor: D previous: A action: 2:A->D
+Alterado sucessor: D previous: A action: 2:A->D
+current_node: D
+sucessor: G previous: A action: 1:A->G
+Alterado sucessor: G previous: D action: 0:D->G
+current_node: G
+State: G action: 0:D->G
+State: D action: 2:A->D
+2:A->D 0:D->G 
+
+current_node: A
+sucessor: B previous: A action: 0:A->B
+Alterado sucessor: B previous: A action: 0:A->B
+current_node: B
+sucessor: A previous: None action: None
+Alterado sucessor: A previous: None action: None
+sucessor: C previous: B action: 1:B->C
+Alterado sucessor: C previous: B action: 1:B->C
+current_node: C
+sucessor: A previous: None action: None
+Alterado sucessor: A previous: None action: None
+sucessor: G previous: C action: 1:C->G
+Alterado sucessor: G previous: C action: 1:C->G
+sucessor: B previous: A action: 0:A->B
+Alterado sucessor: B previous: A action: 0:A->B
+current_node: G
+State: G action: 1:C->G
+State: C action: 1:B->C
+State: B action: 0:A->B
+0:A->B 1:B->C 1:C->G 
+
+current_node: A
+sucessor: B1 previous: A action: 0:A->B1
+Alterado sucessor: B1 previous: A action: 0:A->B1
+sucessor: C previous: A action: 1:A->C
+Alterado sucessor: C previous: A action: 1:A->C
+sucessor: B2 previous: A action: 2:A->B2
+Alterado sucessor: B2 previous: A action: 2:A->B2
+current_node: B2
+sucessor: C previous: A action: 1:A->C
+Alterado sucessor: C previous: B2 action: 0:B2->C
+current_node: C
+sucessor: D previous: C action: 0:C->D
+Alterado sucessor: D previous: C action: 0:C->D
+current_node: D
+sucessor: E1 previous: D action: 0:D->E1
+Alterado sucessor: E1 previous: D action: 0:D->E1
+sucessor: F previous: D action: 1:D->F
+Alterado sucessor: F previous: D action: 1:D->F
+sucessor: E2 previous: D action: 2:D->E2
+Alterado sucessor: E2 previous: D action: 2:D->E2
+current_node: E2
+sucessor: F previous: D action: 1:D->F
+Alterado sucessor: F previous: E2 action: 0:E2->F
+current_node: F
+sucessor: G previous: F action: 0:F->G
+Alterado sucessor: G previous: F action: 0:F->G
+current_node: G
+State: G action: 0:F->G
+State: F action: 0:E2->F
+State: E2 action: 2:D->E2
+State: D action: 0:C->D
+State: C action: 0:B2->C
+State: B2 action: 2:A->B2
+2:A->B2 0:B2->C 0:C->D 2:D->E2 0:E2->F 0:F->G 
+
+current_node: (34, 16)
+sucessor: (34, 15) previous: (34, 16) action: South
+Alterado sucessor: (34, 15) previous: (34, 16) action: South
+sucessor: (33, 16) previous: (34, 16) action: West
+Alterado sucessor: (33, 16) previous: (34, 16) action: West
+current_node: (33, 16)
+sucessor: (34, 16) previous: None action: None
+Alterado sucessor: (34, 16) previous: None action: None
+sucessor: (32, 16) previous: (33, 16) action: West
+Alterado sucessor: (32, 16) previous: (33, 16) action: West
+current_node: (32, 16)
+sucessor: (33, 16) previous: (34, 16) action: West
+Alterado sucessor: (33, 16) previous: (34, 16) action: West
+sucessor: (31, 16) previous: (32, 16) action: West
+Alterado sucessor: (31, 16) previous: (32, 16) action: West
+current_node: (31, 16)
+sucessor: (32, 16) previous: (33, 16) action: West
+Alterado sucessor: (32, 16) previous: (33, 16) action: West
+sucessor: (30, 16) previous: (31, 16) action: West
+Alterado sucessor: (30, 16) previous: (31, 16) action: West
+current_node: (30, 16)
+sucessor: (31, 16) previous: (32, 16) action: West
+Alterado sucessor: (31, 16) previous: (32, 16) action: West
+sucessor: (29, 16) previous: (30, 16) action: West
+Alterado sucessor: (29, 16) previous: (30, 16) action: West
+current_node: (29, 16)
+sucessor: (30, 16) previous: (31, 16) action: West
+Alterado sucessor: (30, 16) previous: (31, 16) action: West
+sucessor: (28, 16) previous: (29, 16) action: West
+Alterado sucessor: (28, 16) previous: (29, 16) action: West
+current_node: (28, 16)
+sucessor: (29, 16) previous: (30, 16) action: West
+Alterado sucessor: (29, 16) previous: (30, 16) action: West
+sucessor: (27, 16) previous: (28, 16) action: West
+Alterado sucessor: (27, 16) previous: (28, 16) action: West
+current_node: (27, 16)
+sucessor: (28, 16) previous: (29, 16) action: West
+Alterado sucessor: (28, 16) previous: (29, 16) action: West
+sucessor: (26, 16) previous: (27, 16) action: West
+Alterado sucessor: (26, 16) previous: (27, 16) action: West
+current_node: (26, 16)
+sucessor: (27, 16) previous: (28, 16) action: West
+Alterado sucessor: (27, 16) previous: (28, 16) action: West
+sucessor: (25, 16) previous: (26, 16) action: West
+Alterado sucessor: (25, 16) previous: (26, 16) action: West
+current_node: (25, 16)
+sucessor: (25, 15) previous: (25, 16) action: South
+Alterado sucessor: (25, 15) previous: (25, 16) action: South
+sucessor: (26, 16) previous: (27, 16) action: West
+Alterado sucessor: (26, 16) previous: (27, 16) action: West
+sucessor: (24, 16) previous: (25, 16) action: West
+Alterado sucessor: (24, 16) previous: (25, 16) action: West
+current_node: (24, 16)
+sucessor: (25, 16) previous: (26, 16) action: West
+Alterado sucessor: (25, 16) previous: (26, 16) action: West
+sucessor: (23, 16) previous: (24, 16) action: West
+Alterado sucessor: (23, 16) previous: (24, 16) action: West
+current_node: (23, 16)
+sucessor: (24, 16) previous: (25, 16) action: West
+Alterado sucessor: (24, 16) previous: (25, 16) action: West
+sucessor: (22, 16) previous: (23, 16) action: West
+Alterado sucessor: (22, 16) previous: (23, 16) action: West
+current_node: (22, 16)
+sucessor: (23, 16) previous: (24, 16) action: West
+Alterado sucessor: (23, 16) previous: (24, 16) action: West
+sucessor: (21, 16) previous: (22, 16) action: West
+Alterado sucessor: (21, 16) previous: (22, 16) action: West
+current_node: (21, 16)
+sucessor: (22, 16) previous: (23, 16) action: West
+Alterado sucessor: (22, 16) previous: (23, 16) action: West
+sucessor: (20, 16) previous: (21, 16) action: West
+Alterado sucessor: (20, 16) previous: (21, 16) action: West
+current_node: (20, 16)
+sucessor: (21, 16) previous: (22, 16) action: West
+Alterado sucessor: (21, 16) previous: (22, 16) action: West
+sucessor: (19, 16) previous: (20, 16) action: West
+Alterado sucessor: (19, 16) previous: (20, 16) action: West
+current_node: (19, 16)
+sucessor: (20, 16) previous: (21, 16) action: West
+Alterado sucessor: (20, 16) previous: (21, 16) action: West
+sucessor: (18, 16) previous: (19, 16) action: West
+Alterado sucessor: (18, 16) previous: (19, 16) action: West
+current_node: (18, 16)
+sucessor: (19, 16) previous: (20, 16) action: West
+Alterado sucessor: (19, 16) previous: (20, 16) action: West
+sucessor: (17, 16) previous: (18, 16) action: West
+Alterado sucessor: (17, 16) previous: (18, 16) action: West
+current_node: (17, 16)
+sucessor: (18, 16) previous: (19, 16) action: West
+Alterado sucessor: (18, 16) previous: (19, 16) action: West
+sucessor: (16, 16) previous: (17, 16) action: West
+Alterado sucessor: (16, 16) previous: (17, 16) action: West
+current_node: (16, 16)
+sucessor: (17, 16) previous: (18, 16) action: West
+Alterado sucessor: (17, 16) previous: (18, 16) action: West
+sucessor: (15, 16) previous: (16, 16) action: West
+Alterado sucessor: (15, 16) previous: (16, 16) action: West
+current_node: (15, 16)
+sucessor: (16, 16) previous: (17, 16) action: West
+Alterado sucessor: (16, 16) previous: (17, 16) action: West
+sucessor: (14, 16) previous: (15, 16) action: West
+Alterado sucessor: (14, 16) previous: (15, 16) action: West
+current_node: (14, 16)
+sucessor: (15, 16) previous: (16, 16) action: West
+Alterado sucessor: (15, 16) previous: (16, 16) action: West
+sucessor: (13, 16) previous: (14, 16) action: West
+Alterado sucessor: (13, 16) previous: (14, 16) action: West
+current_node: (13, 16)
+sucessor: (14, 16) previous: (15, 16) action: West
+Alterado sucessor: (14, 16) previous: (15, 16) action: West
+sucessor: (12, 16) previous: (13, 16) action: West
+Alterado sucessor: (12, 16) previous: (13, 16) action: West
+current_node: (12, 16)
+sucessor: (13, 16) previous: (14, 16) action: West
+Alterado sucessor: (13, 16) previous: (14, 16) action: West
+sucessor: (11, 16) previous: (12, 16) action: West
+Alterado sucessor: (11, 16) previous: (12, 16) action: West
+current_node: (11, 16)
+sucessor: (12, 16) previous: (13, 16) action: West
+Alterado sucessor: (12, 16) previous: (13, 16) action: West
+sucessor: (10, 16) previous: (11, 16) action: West
+Alterado sucessor: (10, 16) previous: (11, 16) action: West
+current_node: (10, 16)
+sucessor: (11, 16) previous: (12, 16) action: West
+Alterado sucessor: (11, 16) previous: (12, 16) action: West
+sucessor: (9, 16) previous: (10, 16) action: West
+Alterado sucessor: (9, 16) previous: (10, 16) action: West
+current_node: (9, 16)
+sucessor: (10, 16) previous: (11, 16) action: West
+Alterado sucessor: (10, 16) previous: (11, 16) action: West
+sucessor: (8, 16) previous: (9, 16) action: West
+Alterado sucessor: (8, 16) previous: (9, 16) action: West
+current_node: (8, 16)
+sucessor: (9, 16) previous: (10, 16) action: West
+Alterado sucessor: (9, 16) previous: (10, 16) action: West
+sucessor: (7, 16) previous: (8, 16) action: West
+Alterado sucessor: (7, 16) previous: (8, 16) action: West
+current_node: (7, 16)
+sucessor: (8, 16) previous: (9, 16) action: West
+Alterado sucessor: (8, 16) previous: (9, 16) action: West
+sucessor: (6, 16) previous: (7, 16) action: West
+Alterado sucessor: (6, 16) previous: (7, 16) action: West
+current_node: (6, 16)
+sucessor: (7, 16) previous: (8, 16) action: West
+Alterado sucessor: (7, 16) previous: (8, 16) action: West
+sucessor: (5, 16) previous: (6, 16) action: West
+Alterado sucessor: (5, 16) previous: (6, 16) action: West
+current_node: (5, 16)
+sucessor: (6, 16) previous: (7, 16) action: West
+Alterado sucessor: (6, 16) previous: (7, 16) action: West
+sucessor: (4, 16) previous: (5, 16) action: West
+Alterado sucessor: (4, 16) previous: (5, 16) action: West
+current_node: (4, 16)
+sucessor: (5, 16) previous: (6, 16) action: West
+Alterado sucessor: (5, 16) previous: (6, 16) action: West
+sucessor: (3, 16) previous: (4, 16) action: West
+Alterado sucessor: (3, 16) previous: (4, 16) action: West
+current_node: (3, 16)
+sucessor: (4, 16) previous: (5, 16) action: West
+Alterado sucessor: (4, 16) previous: (5, 16) action: West
+sucessor: (2, 16) previous: (3, 16) action: West
+Alterado sucessor: (2, 16) previous: (3, 16) action: West
+current_node: (2, 16)
+sucessor: (3, 16) previous: (4, 16) action: West
+Alterado sucessor: (3, 16) previous: (4, 16) action: West
+sucessor: (1, 16) previous: (2, 16) action: West
+Alterado sucessor: (1, 16) previous: (2, 16) action: West
+current_node: (1, 16)
+sucessor: (1, 15) previous: (1, 16) action: South
+Alterado sucessor: (1, 15) previous: (1, 16) action: South
+sucessor: (2, 16) previous: (3, 16) action: West
+Alterado sucessor: (2, 16) previous: (3, 16) action: West
+current_node: (1, 15)
+sucessor: (1, 16) previous: (2, 16) action: West
+Alterado sucessor: (1, 16) previous: (2, 16) action: West
+sucessor: (1, 14) previous: (1, 15) action: South
+Alterado sucessor: (1, 14) previous: (1, 15) action: South
+current_node: (1, 14)
+sucessor: (1, 15) previous: (1, 16) action: South
+Alterado sucessor: (1, 15) previous: (1, 16) action: South
+sucessor: (1, 13) previous: (1, 14) action: South
+Alterado sucessor: (1, 13) previous: (1, 14) action: South
+current_node: (1, 13)
+sucessor: (1, 14) previous: (1, 15) action: South
+Alterado sucessor: (1, 14) previous: (1, 15) action: South
+sucessor: (1, 12) previous: (1, 13) action: South
+Alterado sucessor: (1, 12) previous: (1, 13) action: South
+current_node: (1, 12)
+sucessor: (1, 13) previous: (1, 14) action: South
+Alterado sucessor: (1, 13) previous: (1, 14) action: South
+sucessor: (1, 11) previous: (1, 12) action: South
+Alterado sucessor: (1, 11) previous: (1, 12) action: South
+current_node: (1, 11)
+sucessor: (1, 12) previous: (1, 13) action: South
+Alterado sucessor: (1, 12) previous: (1, 13) action: South
+sucessor: (1, 10) previous: (1, 11) action: South
+Alterado sucessor: (1, 10) previous: (1, 11) action: South
+current_node: (1, 10)
+sucessor: (1, 11) previous: (1, 12) action: South
+Alterado sucessor: (1, 11) previous: (1, 12) action: South
+sucessor: (1, 9) previous: (1, 10) action: South
+Alterado sucessor: (1, 9) previous: (1, 10) action: South
+current_node: (1, 9)
+sucessor: (1, 10) previous: (1, 11) action: South
+Alterado sucessor: (1, 10) previous: (1, 11) action: South
+sucessor: (1, 8) previous: (1, 9) action: South
+Alterado sucessor: (1, 8) previous: (1, 9) action: South
+current_node: (1, 8)
+sucessor: (1, 9) previous: (1, 10) action: South
+Alterado sucessor: (1, 9) previous: (1, 10) action: South
+sucessor: (1, 7) previous: (1, 8) action: South
+Alterado sucessor: (1, 7) previous: (1, 8) action: South
+current_node: (1, 7)
+sucessor: (1, 8) previous: (1, 9) action: South
+Alterado sucessor: (1, 8) previous: (1, 9) action: South
+sucessor: (2, 7) previous: (1, 7) action: East
+Alterado sucessor: (2, 7) previous: (1, 7) action: East
+current_node: (2, 7)
+sucessor: (3, 7) previous: (2, 7) action: East
+Alterado sucessor: (3, 7) previous: (2, 7) action: East
+sucessor: (1, 7) previous: (1, 8) action: South
+Alterado sucessor: (1, 7) previous: (1, 8) action: South
+current_node: (3, 7)
+sucessor: (4, 7) previous: (3, 7) action: East
+Alterado sucessor: (4, 7) previous: (3, 7) action: East
+sucessor: (2, 7) previous: (1, 7) action: East
+Alterado sucessor: (2, 7) previous: (1, 7) action: East
+current_node: (4, 7)
+sucessor: (4, 8) previous: (4, 7) action: North
+Alterado sucessor: (4, 8) previous: (4, 7) action: North
+sucessor: (3, 7) previous: (2, 7) action: East
+Alterado sucessor: (3, 7) previous: (2, 7) action: East
+current_node: (4, 8)
+sucessor: (4, 9) previous: (4, 8) action: North
+Alterado sucessor: (4, 9) previous: (4, 8) action: North
+sucessor: (4, 7) previous: (3, 7) action: East
+Alterado sucessor: (4, 7) previous: (3, 7) action: East
+current_node: (4, 9)
+sucessor: (4, 10) previous: (4, 9) action: North
+Alterado sucessor: (4, 10) previous: (4, 9) action: North
+sucessor: (4, 8) previous: (4, 7) action: North
+Alterado sucessor: (4, 8) previous: (4, 7) action: North
+current_node: (4, 10)
+sucessor: (4, 11) previous: (4, 10) action: North
+Alterado sucessor: (4, 11) previous: (4, 10) action: North
+sucessor: (4, 9) previous: (4, 8) action: North
+Alterado sucessor: (4, 9) previous: (4, 8) action: North
+sucessor: (3, 10) previous: (4, 10) action: West
+Alterado sucessor: (3, 10) previous: (4, 10) action: West
+current_node: (3, 10)
+sucessor: (4, 10) previous: (4, 9) action: North
+Alterado sucessor: (4, 10) previous: (4, 9) action: North
+current_node: (4, 11)
+sucessor: (4, 12) previous: (4, 11) action: North
+Alterado sucessor: (4, 12) previous: (4, 11) action: North
+sucessor: (4, 10) previous: (4, 9) action: North
+Alterado sucessor: (4, 10) previous: (4, 9) action: North
+current_node: (4, 12)
+sucessor: (4, 13) previous: (4, 12) action: North
+Alterado sucessor: (4, 13) previous: (4, 12) action: North
+sucessor: (4, 11) previous: (4, 10) action: North
+Alterado sucessor: (4, 11) previous: (4, 10) action: North
+current_node: (4, 13)
+sucessor: (4, 14) previous: (4, 13) action: North
+Alterado sucessor: (4, 14) previous: (4, 13) action: North
+sucessor: (4, 12) previous: (4, 11) action: North
+Alterado sucessor: (4, 12) previous: (4, 11) action: North
+current_node: (4, 14)
+sucessor: (4, 13) previous: (4, 12) action: North
+Alterado sucessor: (4, 13) previous: (4, 12) action: North
+sucessor: (5, 14) previous: (4, 14) action: East
+Alterado sucessor: (5, 14) previous: (4, 14) action: East
+current_node: (5, 14)
+sucessor: (6, 14) previous: (5, 14) action: East
+Alterado sucessor: (6, 14) previous: (5, 14) action: East
+sucessor: (4, 14) previous: (4, 13) action: North
+Alterado sucessor: (4, 14) previous: (4, 13) action: North
+current_node: (6, 14)
+sucessor: (6, 13) previous: (6, 14) action: South
+Alterado sucessor: (6, 13) previous: (6, 14) action: South
+sucessor: (5, 14) previous: (4, 14) action: East
+Alterado sucessor: (5, 14) previous: (4, 14) action: East
+current_node: (6, 13)
+sucessor: (6, 14) previous: (5, 14) action: East
+Alterado sucessor: (6, 14) previous: (5, 14) action: East
+sucessor: (6, 12) previous: (6, 13) action: South
+Alterado sucessor: (6, 12) previous: (6, 13) action: South
+current_node: (6, 12)
+sucessor: (6, 13) previous: (6, 14) action: South
+Alterado sucessor: (6, 13) previous: (6, 14) action: South
+sucessor: (6, 11) previous: (6, 12) action: South
+Alterado sucessor: (6, 11) previous: (6, 12) action: South
+current_node: (6, 11)
+sucessor: (6, 12) previous: (6, 13) action: South
+Alterado sucessor: (6, 12) previous: (6, 13) action: South
+sucessor: (6, 10) previous: (6, 11) action: South
+Alterado sucessor: (6, 10) previous: (6, 11) action: South
+current_node: (6, 10)
+sucessor: (6, 11) previous: (6, 12) action: South
+Alterado sucessor: (6, 11) previous: (6, 12) action: South
+sucessor: (6, 9) previous: (6, 10) action: South
+Alterado sucessor: (6, 9) previous: (6, 10) action: South
+current_node: (6, 9)
+sucessor: (6, 10) previous: (6, 11) action: South
+Alterado sucessor: (6, 10) previous: (6, 11) action: South
+sucessor: (6, 8) previous: (6, 9) action: South
+Alterado sucessor: (6, 8) previous: (6, 9) action: South
+current_node: (6, 8)
+sucessor: (6, 9) previous: (6, 10) action: South
+Alterado sucessor: (6, 9) previous: (6, 10) action: South
+sucessor: (7, 8) previous: (6, 8) action: East
+Alterado sucessor: (7, 8) previous: (6, 8) action: East
+current_node: (7, 8)
+sucessor: (8, 8) previous: (7, 8) action: East
+Alterado sucessor: (8, 8) previous: (7, 8) action: East
+sucessor: (6, 8) previous: (6, 9) action: South
+Alterado sucessor: (6, 8) previous: (6, 9) action: South
+current_node: (8, 8)
+sucessor: (8, 9) previous: (8, 8) action: North
+Alterado sucessor: (8, 9) previous: (8, 8) action: North
+sucessor: (7, 8) previous: (6, 8) action: East
+Alterado sucessor: (7, 8) previous: (6, 8) action: East
+current_node: (8, 9)
+sucessor: (8, 10) previous: (8, 9) action: North
+Alterado sucessor: (8, 10) previous: (8, 9) action: North
+sucessor: (8, 8) previous: (7, 8) action: East
+Alterado sucessor: (8, 8) previous: (7, 8) action: East
+current_node: (8, 10)
+sucessor: (8, 11) previous: (8, 10) action: North
+Alterado sucessor: (8, 11) previous: (8, 10) action: North
+sucessor: (8, 9) previous: (8, 8) action: North
+Alterado sucessor: (8, 9) previous: (8, 8) action: North
+current_node: (8, 11)
+sucessor: (8, 12) previous: (8, 11) action: North
+Alterado sucessor: (8, 12) previous: (8, 11) action: North
+sucessor: (8, 10) previous: (8, 9) action: North
+Alterado sucessor: (8, 10) previous: (8, 9) action: North
+current_node: (8, 12)
+sucessor: (8, 13) previous: (8, 12) action: North
+Alterado sucessor: (8, 13) previous: (8, 12) action: North
+sucessor: (8, 11) previous: (8, 10) action: North
+Alterado sucessor: (8, 11) previous: (8, 10) action: North
+current_node: (8, 13)
+sucessor: (8, 14) previous: (8, 13) action: North
+Alterado sucessor: (8, 14) previous: (8, 13) action: North
+sucessor: (8, 12) previous: (8, 11) action: North
+Alterado sucessor: (8, 12) previous: (8, 11) action: North
+current_node: (8, 14)
+sucessor: (8, 13) previous: (8, 12) action: North
+Alterado sucessor: (8, 13) previous: (8, 12) action: North
+sucessor: (9, 14) previous: (8, 14) action: East
+Alterado sucessor: (9, 14) previous: (8, 14) action: East
+current_node: (9, 14)
+sucessor: (10, 14) previous: (9, 14) action: East
+Alterado sucessor: (10, 14) previous: (9, 14) action: East
+sucessor: (8, 14) previous: (8, 13) action: North
+Alterado sucessor: (8, 14) previous: (8, 13) action: North
+current_node: (10, 14)
+sucessor: (10, 13) previous: (10, 14) action: South
+Alterado sucessor: (10, 13) previous: (10, 14) action: South
+sucessor: (9, 14) previous: (8, 14) action: East
+Alterado sucessor: (9, 14) previous: (8, 14) action: East
+current_node: (10, 13)
+sucessor: (10, 14) previous: (9, 14) action: East
+Alterado sucessor: (10, 14) previous: (9, 14) action: East
+sucessor: (10, 12) previous: (10, 13) action: South
+Alterado sucessor: (10, 12) previous: (10, 13) action: South
+current_node: (10, 12)
+sucessor: (10, 13) previous: (10, 14) action: South
+Alterado sucessor: (10, 13) previous: (10, 14) action: South
+sucessor: (10, 11) previous: (10, 12) action: South
+Alterado sucessor: (10, 11) previous: (10, 12) action: South
+current_node: (10, 11)
+sucessor: (10, 12) previous: (10, 13) action: South
+Alterado sucessor: (10, 12) previous: (10, 13) action: South
+sucessor: (10, 10) previous: (10, 11) action: South
+Alterado sucessor: (10, 10) previous: (10, 11) action: South
+current_node: (10, 10)
+sucessor: (10, 11) previous: (10, 12) action: South
+Alterado sucessor: (10, 11) previous: (10, 12) action: South
+sucessor: (11, 10) previous: (10, 10) action: East
+Alterado sucessor: (11, 10) previous: (10, 10) action: East
+current_node: (11, 10)
+sucessor: (12, 10) previous: (11, 10) action: East
+Alterado sucessor: (12, 10) previous: (11, 10) action: East
+sucessor: (10, 10) previous: (10, 11) action: South
+Alterado sucessor: (10, 10) previous: (10, 11) action: South
+current_node: (12, 10)
+sucessor: (12, 11) previous: (12, 10) action: North
+Alterado sucessor: (12, 11) previous: (12, 10) action: North
+sucessor: (11, 10) previous: (10, 10) action: East
+Alterado sucessor: (11, 10) previous: (10, 10) action: East
+current_node: (12, 11)
+sucessor: (12, 12) previous: (12, 11) action: North
+Alterado sucessor: (12, 12) previous: (12, 11) action: North
+sucessor: (12, 10) previous: (11, 10) action: East
+Alterado sucessor: (12, 10) previous: (11, 10) action: East
+current_node: (12, 12)
+sucessor: (12, 13) previous: (12, 12) action: North
+Alterado sucessor: (12, 13) previous: (12, 12) action: North
+sucessor: (12, 11) previous: (12, 10) action: North
+Alterado sucessor: (12, 11) previous: (12, 10) action: North
+sucessor: (13, 12) previous: (12, 12) action: East
+Alterado sucessor: (13, 12) previous: (12, 12) action: East
+current_node: (13, 12)
+sucessor: (14, 12) previous: (13, 12) action: East
+Alterado sucessor: (14, 12) previous: (13, 12) action: East
+sucessor: (12, 12) previous: (12, 11) action: North
+Alterado sucessor: (12, 12) previous: (12, 11) action: North
+current_node: (14, 12)
+sucessor: (14, 11) previous: (14, 12) action: South
+Alterado sucessor: (14, 11) previous: (14, 12) action: South
+sucessor: (15, 12) previous: (14, 12) action: East
+Alterado sucessor: (15, 12) previous: (14, 12) action: East
+sucessor: (13, 12) previous: (12, 12) action: East
+Alterado sucessor: (13, 12) previous: (12, 12) action: East
+current_node: (15, 12)
+sucessor: (16, 12) previous: (15, 12) action: East
+Alterado sucessor: (16, 12) previous: (15, 12) action: East
+sucessor: (14, 12) previous: (13, 12) action: East
+Alterado sucessor: (14, 12) previous: (13, 12) action: East
+current_node: (16, 12)
+sucessor: (17, 12) previous: (16, 12) action: East
+Alterado sucessor: (17, 12) previous: (16, 12) action: East
+sucessor: (15, 12) previous: (14, 12) action: East
+Alterado sucessor: (15, 12) previous: (14, 12) action: East
+current_node: (17, 12)
+sucessor: (17, 13) previous: (17, 12) action: North
+Alterado sucessor: (17, 13) previous: (17, 12) action: North
+sucessor: (18, 12) previous: (17, 12) action: East
+Alterado sucessor: (18, 12) previous: (17, 12) action: East
+sucessor: (16, 12) previous: (15, 12) action: East
+Alterado sucessor: (16, 12) previous: (15, 12) action: East
+current_node: (18, 12)
+sucessor: (19, 12) previous: (18, 12) action: East
+Alterado sucessor: (19, 12) previous: (18, 12) action: East
+sucessor: (17, 12) previous: (16, 12) action: East
+Alterado sucessor: (17, 12) previous: (16, 12) action: East
+current_node: (19, 12)
+sucessor: (19, 11) previous: (19, 12) action: South
+Alterado sucessor: (19, 11) previous: (19, 12) action: South
+sucessor: (20, 12) previous: (19, 12) action: East
+Alterado sucessor: (20, 12) previous: (19, 12) action: East
+sucessor: (18, 12) previous: (17, 12) action: East
+Alterado sucessor: (18, 12) previous: (17, 12) action: East
+current_node: (20, 12)
+sucessor: (20, 11) previous: (20, 12) action: South
+Alterado sucessor: (20, 11) previous: (20, 12) action: South
+sucessor: (21, 12) previous: (20, 12) action: East
+Alterado sucessor: (21, 12) previous: (20, 12) action: East
+sucessor: (19, 12) previous: (18, 12) action: East
+Alterado sucessor: (19, 12) previous: (18, 12) action: East
+current_node: (21, 12)
+sucessor: (22, 12) previous: (21, 12) action: East
+Alterado sucessor: (22, 12) previous: (21, 12) action: East
+sucessor: (20, 12) previous: (19, 12) action: East
+Alterado sucessor: (20, 12) previous: (19, 12) action: East
+current_node: (22, 12)
+sucessor: (23, 12) previous: (22, 12) action: East
+Alterado sucessor: (23, 12) previous: (22, 12) action: East
+sucessor: (21, 12) previous: (20, 12) action: East
+Alterado sucessor: (21, 12) previous: (20, 12) action: East
+current_node: (23, 12)
+sucessor: (24, 12) previous: (23, 12) action: East
+Alterado sucessor: (24, 12) previous: (23, 12) action: East
+sucessor: (22, 12) previous: (21, 12) action: East
+Alterado sucessor: (22, 12) previous: (21, 12) action: East
+current_node: (24, 12)
+sucessor: (24, 11) previous: (24, 12) action: South
+Alterado sucessor: (24, 11) previous: (24, 12) action: South
+sucessor: (23, 12) previous: (22, 12) action: East
+Alterado sucessor: (23, 12) previous: (22, 12) action: East
+current_node: (24, 11)
+sucessor: (24, 12) previous: (23, 12) action: East
+Alterado sucessor: (24, 12) previous: (23, 12) action: East
+sucessor: (25, 11) previous: (24, 11) action: East
+Alterado sucessor: (25, 11) previous: (24, 11) action: East
+current_node: (25, 11)
+sucessor: (26, 11) previous: (25, 11) action: East
+Alterado sucessor: (26, 11) previous: (25, 11) action: East
+sucessor: (24, 11) previous: (24, 12) action: South
+Alterado sucessor: (24, 11) previous: (24, 12) action: South
+current_node: (26, 11)
+sucessor: (27, 11) previous: (26, 11) action: East
+Alterado sucessor: (27, 11) previous: (26, 11) action: East
+sucessor: (25, 11) previous: (24, 11) action: East
+Alterado sucessor: (25, 11) previous: (24, 11) action: East
+current_node: (27, 11)
+sucessor: (27, 12) previous: (27, 11) action: North
+Alterado sucessor: (27, 12) previous: (27, 11) action: North
+sucessor: (26, 11) previous: (25, 11) action: East
+Alterado sucessor: (26, 11) previous: (25, 11) action: East
+current_node: (27, 12)
+sucessor: (27, 13) previous: (27, 12) action: North
+Alterado sucessor: (27, 13) previous: (27, 12) action: North
+sucessor: (27, 11) previous: (26, 11) action: East
+Alterado sucessor: (27, 11) previous: (26, 11) action: East
+current_node: (27, 13)
+sucessor: (27, 14) previous: (27, 13) action: North
+Alterado sucessor: (27, 14) previous: (27, 13) action: North
+sucessor: (27, 12) previous: (27, 11) action: North
+Alterado sucessor: (27, 12) previous: (27, 11) action: North
+current_node: (27, 14)
+sucessor: (27, 13) previous: (27, 12) action: North
+Alterado sucessor: (27, 13) previous: (27, 12) action: North
+sucessor: (26, 14) previous: (27, 14) action: West
+Alterado sucessor: (26, 14) previous: (27, 14) action: West
+current_node: (26, 14)
+sucessor: (27, 14) previous: (27, 13) action: North
+Alterado sucessor: (27, 14) previous: (27, 13) action: North
+sucessor: (25, 14) previous: (26, 14) action: West
+Alterado sucessor: (25, 14) previous: (26, 14) action: West
+current_node: (25, 14)
+sucessor: (25, 15) previous: (25, 16) action: South
+Alterado sucessor: (25, 15) previous: (25, 14) action: North
+sucessor: (26, 14) previous: (27, 14) action: West
+Alterado sucessor: (26, 14) previous: (27, 14) action: West
+current_node: (20, 11)
+sucessor: (20, 12) previous: (19, 12) action: East
+Alterado sucessor: (20, 12) previous: (19, 12) action: East
+sucessor: (20, 10) previous: (20, 11) action: South
+Alterado sucessor: (20, 10) previous: (20, 11) action: South
+sucessor: (19, 11) previous: (19, 12) action: South
+Alterado sucessor: (19, 11) previous: (20, 11) action: West
+current_node: (20, 10)
+sucessor: (20, 11) previous: (20, 12) action: South
+Alterado sucessor: (20, 11) previous: (20, 12) action: South
+sucessor: (20, 9) previous: (20, 10) action: South
+Alterado sucessor: (20, 9) previous: (20, 10) action: South
+current_node: (20, 9)
+sucessor: (20, 10) previous: (20, 11) action: South
+Alterado sucessor: (20, 10) previous: (20, 11) action: South
+sucessor: (21, 9) previous: (20, 9) action: East
+Alterado sucessor: (21, 9) previous: (20, 9) action: East
+current_node: (21, 9)
+sucessor: (22, 9) previous: (21, 9) action: East
+Alterado sucessor: (22, 9) previous: (21, 9) action: East
+sucessor: (20, 9) previous: (20, 10) action: South
+Alterado sucessor: (20, 9) previous: (20, 10) action: South
+current_node: (22, 9)
+sucessor: (23, 9) previous: (22, 9) action: East
+Alterado sucessor: (23, 9) previous: (22, 9) action: East
+sucessor: (21, 9) previous: (20, 9) action: East
+Alterado sucessor: (21, 9) previous: (20, 9) action: East
+current_node: (23, 9)
+sucessor: (24, 9) previous: (23, 9) action: East
+Alterado sucessor: (24, 9) previous: (23, 9) action: East
+sucessor: (22, 9) previous: (21, 9) action: East
+Alterado sucessor: (22, 9) previous: (21, 9) action: East
+current_node: (24, 9)
+sucessor: (25, 9) previous: (24, 9) action: East
+Alterado sucessor: (25, 9) previous: (24, 9) action: East
+sucessor: (23, 9) previous: (22, 9) action: East
+Alterado sucessor: (23, 9) previous: (22, 9) action: East
+current_node: (25, 9)
+sucessor: (26, 9) previous: (25, 9) action: East
+Alterado sucessor: (26, 9) previous: (25, 9) action: East
+sucessor: (24, 9) previous: (23, 9) action: East
+Alterado sucessor: (24, 9) previous: (23, 9) action: East
+current_node: (26, 9)
+sucessor: (27, 9) previous: (26, 9) action: East
+Alterado sucessor: (27, 9) previous: (26, 9) action: East
+sucessor: (25, 9) previous: (24, 9) action: East
+Alterado sucessor: (25, 9) previous: (24, 9) action: East
+current_node: (27, 9)
+sucessor: (27, 8) previous: (27, 9) action: South
+Alterado sucessor: (27, 8) previous: (27, 9) action: South
+sucessor: (26, 9) previous: (25, 9) action: East
+Alterado sucessor: (26, 9) previous: (25, 9) action: East
+current_node: (27, 8)
+sucessor: (27, 9) previous: (26, 9) action: East
+Alterado sucessor: (27, 9) previous: (26, 9) action: East
+sucessor: (27, 7) previous: (27, 8) action: South
+Alterado sucessor: (27, 7) previous: (27, 8) action: South
+current_node: (27, 7)
+sucessor: (27, 8) previous: (27, 9) action: South
+Alterado sucessor: (27, 8) previous: (27, 9) action: South
+sucessor: (27, 6) previous: (27, 7) action: South
+Alterado sucessor: (27, 6) previous: (27, 7) action: South
+current_node: (27, 6)
+sucessor: (27, 7) previous: (27, 8) action: South
+Alterado sucessor: (27, 7) previous: (27, 8) action: South
+sucessor: (27, 5) previous: (27, 6) action: South
+Alterado sucessor: (27, 5) previous: (27, 6) action: South
+current_node: (27, 5)
+sucessor: (27, 6) previous: (27, 7) action: South
+Alterado sucessor: (27, 6) previous: (27, 7) action: South
+sucessor: (27, 4) previous: (27, 5) action: South
+Alterado sucessor: (27, 4) previous: (27, 5) action: South
+current_node: (27, 4)
+sucessor: (27, 5) previous: (27, 6) action: South
+Alterado sucessor: (27, 5) previous: (27, 6) action: South
+sucessor: (27, 3) previous: (27, 4) action: South
+Alterado sucessor: (27, 3) previous: (27, 4) action: South
+current_node: (27, 3)
+sucessor: (27, 4) previous: (27, 5) action: South
+Alterado sucessor: (27, 4) previous: (27, 5) action: South
+sucessor: (27, 2) previous: (27, 3) action: South
+Alterado sucessor: (27, 2) previous: (27, 3) action: South
+current_node: (27, 2)
+sucessor: (27, 3) previous: (27, 4) action: South
+Alterado sucessor: (27, 3) previous: (27, 4) action: South
+sucessor: (27, 1) previous: (27, 2) action: South
+Alterado sucessor: (27, 1) previous: (27, 2) action: South
+sucessor: (26, 2) previous: (27, 2) action: West
+Alterado sucessor: (26, 2) previous: (27, 2) action: West
+current_node: (26, 2)
+sucessor: (27, 2) previous: (27, 3) action: South
+Alterado sucessor: (27, 2) previous: (27, 3) action: South
+sucessor: (25, 2) previous: (26, 2) action: West
+Alterado sucessor: (25, 2) previous: (26, 2) action: West
+current_node: (25, 2)
+sucessor: (26, 2) previous: (27, 2) action: West
+Alterado sucessor: (26, 2) previous: (27, 2) action: West
+sucessor: (24, 2) previous: (25, 2) action: West
+Alterado sucessor: (24, 2) previous: (25, 2) action: West
+current_node: (24, 2)
+sucessor: (25, 2) previous: (26, 2) action: West
+Alterado sucessor: (25, 2) previous: (26, 2) action: West
+sucessor: (23, 2) previous: (24, 2) action: West
+Alterado sucessor: (23, 2) previous: (24, 2) action: West
+current_node: (23, 2)
+sucessor: (24, 2) previous: (25, 2) action: West
+Alterado sucessor: (24, 2) previous: (25, 2) action: West
+sucessor: (22, 2) previous: (23, 2) action: West
+Alterado sucessor: (22, 2) previous: (23, 2) action: West
+current_node: (22, 2)
+sucessor: (23, 2) previous: (24, 2) action: West
+Alterado sucessor: (23, 2) previous: (24, 2) action: West
+sucessor: (21, 2) previous: (22, 2) action: West
+Alterado sucessor: (21, 2) previous: (22, 2) action: West
+current_node: (21, 2)
+sucessor: (22, 2) previous: (23, 2) action: West
+Alterado sucessor: (22, 2) previous: (23, 2) action: West
+sucessor: (20, 2) previous: (21, 2) action: West
+Alterado sucessor: (20, 2) previous: (21, 2) action: West
+current_node: (20, 2)
+sucessor: (21, 2) previous: (22, 2) action: West
+Alterado sucessor: (21, 2) previous: (22, 2) action: West
+sucessor: (19, 2) previous: (20, 2) action: West
+Alterado sucessor: (19, 2) previous: (20, 2) action: West
+current_node: (19, 2)
+sucessor: (20, 2) previous: (21, 2) action: West
+Alterado sucessor: (20, 2) previous: (21, 2) action: West
+sucessor: (18, 2) previous: (19, 2) action: West
+Alterado sucessor: (18, 2) previous: (19, 2) action: West
+current_node: (18, 2)
+sucessor: (19, 2) previous: (20, 2) action: West
+Alterado sucessor: (19, 2) previous: (20, 2) action: West
+sucessor: (17, 2) previous: (18, 2) action: West
+Alterado sucessor: (17, 2) previous: (18, 2) action: West
+current_node: (17, 2)
+sucessor: (18, 2) previous: (19, 2) action: West
+Alterado sucessor: (18, 2) previous: (19, 2) action: West
+sucessor: (16, 2) previous: (17, 2) action: West
+Alterado sucessor: (16, 2) previous: (17, 2) action: West
+current_node: (16, 2)
+sucessor: (17, 2) previous: (18, 2) action: West
+Alterado sucessor: (17, 2) previous: (18, 2) action: West
+sucessor: (15, 2) previous: (16, 2) action: West
+Alterado sucessor: (15, 2) previous: (16, 2) action: West
+current_node: (15, 2)
+sucessor: (15, 3) previous: (15, 2) action: North
+Alterado sucessor: (15, 3) previous: (15, 2) action: North
+sucessor: (16, 2) previous: (17, 2) action: West
+Alterado sucessor: (16, 2) previous: (17, 2) action: West
+sucessor: (14, 2) previous: (15, 2) action: West
+Alterado sucessor: (14, 2) previous: (15, 2) action: West
+current_node: (14, 2)
+sucessor: (15, 2) previous: (16, 2) action: West
+Alterado sucessor: (15, 2) previous: (16, 2) action: West
+sucessor: (13, 2) previous: (14, 2) action: West
+Alterado sucessor: (13, 2) previous: (14, 2) action: West
+current_node: (13, 2)
+sucessor: (14, 2) previous: (15, 2) action: West
+Alterado sucessor: (14, 2) previous: (15, 2) action: West
+sucessor: (12, 2) previous: (13, 2) action: West
+Alterado sucessor: (12, 2) previous: (13, 2) action: West
+current_node: (12, 2)
+sucessor: (13, 2) previous: (14, 2) action: West
+Alterado sucessor: (13, 2) previous: (14, 2) action: West
+sucessor: (11, 2) previous: (12, 2) action: West
+Alterado sucessor: (11, 2) previous: (12, 2) action: West
+current_node: (11, 2)
+sucessor: (12, 2) previous: (13, 2) action: West
+Alterado sucessor: (12, 2) previous: (13, 2) action: West
+sucessor: (10, 2) previous: (11, 2) action: West
+Alterado sucessor: (10, 2) previous: (11, 2) action: West
+current_node: (10, 2)
+sucessor: (10, 1) previous: (10, 2) action: South
+Alterado sucessor: (10, 1) previous: (10, 2) action: South
+sucessor: (11, 2) previous: (12, 2) action: West
+Alterado sucessor: (11, 2) previous: (12, 2) action: West
+current_node: (10, 1)
+sucessor: (10, 2) previous: (11, 2) action: West
+Alterado sucessor: (10, 2) previous: (11, 2) action: West
+sucessor: (9, 1) previous: (10, 1) action: West
+Alterado sucessor: (9, 1) previous: (10, 1) action: West
+current_node: (9, 1)
+sucessor: (10, 1) previous: (10, 2) action: South
+Alterado sucessor: (10, 1) previous: (10, 2) action: South
+sucessor: (8, 1) previous: (9, 1) action: West
+Alterado sucessor: (8, 1) previous: (9, 1) action: West
+current_node: (8, 1)
+sucessor: (9, 1) previous: (10, 1) action: West
+Alterado sucessor: (9, 1) previous: (10, 1) action: West
+sucessor: (7, 1) previous: (8, 1) action: West
+Alterado sucessor: (7, 1) previous: (8, 1) action: West
+current_node: (7, 1)
+sucessor: (8, 1) previous: (9, 1) action: West
+Alterado sucessor: (8, 1) previous: (9, 1) action: West
+sucessor: (6, 1) previous: (7, 1) action: West
+Alterado sucessor: (6, 1) previous: (7, 1) action: West
+current_node: (6, 1)
+sucessor: (7, 1) previous: (8, 1) action: West
+Alterado sucessor: (7, 1) previous: (8, 1) action: West
+sucessor: (5, 1) previous: (6, 1) action: West
+Alterado sucessor: (5, 1) previous: (6, 1) action: West
+current_node: (5, 1)
+sucessor: (6, 1) previous: (7, 1) action: West
+Alterado sucessor: (6, 1) previous: (7, 1) action: West
+sucessor: (4, 1) previous: (5, 1) action: West
+Alterado sucessor: (4, 1) previous: (5, 1) action: West
+current_node: (4, 1)
+sucessor: (5, 1) previous: (6, 1) action: West
+Alterado sucessor: (5, 1) previous: (6, 1) action: West
+sucessor: (3, 1) previous: (4, 1) action: West
+Alterado sucessor: (3, 1) previous: (4, 1) action: West
+current_node: (3, 1)
+sucessor: (4, 1) previous: (5, 1) action: West
+Alterado sucessor: (4, 1) previous: (5, 1) action: West
+sucessor: (2, 1) previous: (3, 1) action: West
+Alterado sucessor: (2, 1) previous: (3, 1) action: West
+current_node: (2, 1)
+sucessor: (3, 1) previous: (4, 1) action: West
+Alterado sucessor: (3, 1) previous: (4, 1) action: West
+sucessor: (1, 1) previous: (2, 1) action: West
+Alterado sucessor: (1, 1) previous: (2, 1) action: West
+current_node: (1, 1)
+State: (1, 1) action: West
+State: (2, 1) action: West
+State: (3, 1) action: West
+State: (4, 1) action: West
+State: (5, 1) action: West
+State: (6, 1) action: West
+State: (7, 1) action: West
+State: (8, 1) action: West
+State: (9, 1) action: West
+State: (10, 1) action: South
+State: (10, 2) action: West
+State: (11, 2) action: West
+State: (12, 2) action: West
+State: (13, 2) action: West
+State: (14, 2) action: West
+State: (15, 2) action: West
+State: (16, 2) action: West
+State: (17, 2) action: West
+State: (18, 2) action: West
+State: (19, 2) action: West
+State: (20, 2) action: West
+State: (21, 2) action: West
+State: (22, 2) action: West
+State: (23, 2) action: West
+State: (24, 2) action: West
+State: (25, 2) action: West
+State: (26, 2) action: West
+State: (27, 2) action: South
+State: (27, 3) action: South
+State: (27, 4) action: South
+State: (27, 5) action: South
+State: (27, 6) action: South
+State: (27, 7) action: South
+State: (27, 8) action: South
+State: (27, 9) action: East
+State: (26, 9) action: East
+State: (25, 9) action: East
+State: (24, 9) action: East
+State: (23, 9) action: East
+State: (22, 9) action: East
+State: (21, 9) action: East
+State: (20, 9) action: South
+State: (20, 10) action: South
+State: (20, 11) action: South
+State: (20, 12) action: East
+State: (19, 12) action: East
+State: (18, 12) action: East
+State: (17, 12) action: East
+State: (16, 12) action: East
+State: (15, 12) action: East
+State: (14, 12) action: East
+State: (13, 12) action: East
+State: (12, 12) action: North
+State: (12, 11) action: North
+State: (12, 10) action: East
+State: (11, 10) action: East
+State: (10, 10) action: South
+State: (10, 11) action: South
+State: (10, 12) action: South
+State: (10, 13) action: South
+State: (10, 14) action: East
+State: (9, 14) action: East
+State: (8, 14) action: North
+State: (8, 13) action: North
+State: (8, 12) action: North
+State: (8, 11) action: North
+State: (8, 10) action: North
+State: (8, 9) action: North
+State: (8, 8) action: East
+State: (7, 8) action: East
+State: (6, 8) action: South
+State: (6, 9) action: South
+State: (6, 10) action: South
+State: (6, 11) action: South
+State: (6, 12) action: South
+State: (6, 13) action: South
+State: (6, 14) action: East
+State: (5, 14) action: East
+State: (4, 14) action: North
+State: (4, 13) action: North
+State: (4, 12) action: North
+State: (4, 11) action: North
+State: (4, 10) action: North
+State: (4, 9) action: North
+State: (4, 8) action: North
+State: (4, 7) action: East
+State: (3, 7) action: East
+State: (2, 7) action: East
+State: (1, 7) action: South
+State: (1, 8) action: South
+State: (1, 9) action: South
+State: (1, 10) action: South
+State: (1, 11) action: South
+State: (1, 12) action: South
+State: (1, 13) action: South
+State: (1, 14) action: South
+State: (1, 15) action: South
+State: (1, 16) action: West
+State: (2, 16) action: West
+State: (3, 16) action: West
+State: (4, 16) action: West
+State: (5, 16) action: West
+State: (6, 16) action: West
+State: (7, 16) action: West
+State: (8, 16) action: West
+State: (9, 16) action: West
+State: (10, 16) action: West
+State: (11, 16) action: West
+State: (12, 16) action: West
+State: (13, 16) action: West
+State: (14, 16) action: West
+State: (15, 16) action: West
+State: (16, 16) action: West
+State: (17, 16) action: West
+State: (18, 16) action: West
+State: (19, 16) action: West
+State: (20, 16) action: West
+State: (21, 16) action: West
+State: (22, 16) action: West
+State: (23, 16) action: West
+State: (24, 16) action: West
+State: (25, 16) action: West
+State: (26, 16) action: West
+State: (27, 16) action: West
+State: (28, 16) action: West
+State: (29, 16) action: West
+State: (30, 16) action: West
+State: (31, 16) action: West
+State: (32, 16) action: West
+State: (33, 16) action: West
+West West West West West West West West West West West West West West West West West West West West West West West West West West West West West West West West West South South South South South South South South South East East East North North North North North North North East East South South South South South South East East North North North North North North East East South South South South East East North North East East East East East East East East South South South East East East East East East East South South South South South South South West West West West West West West West West West West West West West West West West South West West West West West West West West West 
+

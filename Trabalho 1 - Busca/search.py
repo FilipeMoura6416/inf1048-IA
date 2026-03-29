@@ -75,6 +75,8 @@ def tinyMazeSearch(problem):
     return  [s, s, w, s, w, w, s, w] 
 
 def depthFirstSearch(problem):
+
+    log_path = "execution_log.txt"
     class NodoGameTree:
         
         def __init__(self, state, action, cost, previous_state, acumulated_cost, analisado=False):
@@ -87,9 +89,12 @@ def depthFirstSearch(problem):
     
     def create_action_list(dicionario:dict,  nodo: NodoGameTree):
         action_list =  deque()
-        while(nodo.state != problem.getStartState()):
+        while(nodo.previous_state != None):
+            with open(log_path, 'a') as log:
+                log.write(f"State: {nodo.state} action: {nodo.action}\n")
             action_list.appendleft(nodo.action)
             nodo  = dicionario[nodo.previous_state]
+
         return list(action_list)
 
     
@@ -102,6 +107,8 @@ def depthFirstSearch(problem):
     current_node =  first_node 
     while not stack.isEmpty(): #por algum motivo, quando eu testo se current_node é o goal state no while, eu visito um node adicional, o que falha o teste no autograder
         current_node = stack.pop()
+        with open(log_path, 'a') as log:
+            log.write(f"current_node: {current_node.state}\n")
         if problem.isGoalState(current_node.state):
             break
         current_node.analisado =  True
@@ -110,8 +117,21 @@ def depthFirstSearch(problem):
                 new_node =  NodoGameTree(sucessor[0], sucessor[1], sucessor[2], current_node.state, current_node.acumulated_cost + sucessor[2], False)
                 dicionario[new_node.state] = new_node
                 stack.push(new_node)
+            new_node = dicionario[sucessor[0]]
+            with open(log_path, 'a') as log:
+                log.write(f"sucessor: {new_node.state} previous: {new_node.previous_state} action: {new_node.action}\n")
+            if not new_node.analisado:
+                new_node.previous_state = current_node.state
+                new_node.action = sucessor[1]
+            with open(log_path, 'a') as log:
+                log.write(f"Alterado sucessor: {new_node.state} previous: {new_node.previous_state} action: {new_node.action}\n")
 
     action_list = create_action_list( dicionario, current_node)
+    with open(log_path, 'a') as log:
+        for e in action_list:
+            log.write(f"{e} ")
+        log.write("\n\n")
+
     return action_list
     
     
