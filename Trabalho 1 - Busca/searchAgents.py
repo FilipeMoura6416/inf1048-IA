@@ -42,6 +42,7 @@ import util
 import time
 import search
 import math
+import game
 
 
 class GoWestAgent(Agent):
@@ -353,6 +354,7 @@ class CornersProblem(search.SearchProblem):
         return len(actions)
 
 
+
 def cornersHeuristic(state, problem):
     """
     A heuristic for the CornersProblem that you defined.
@@ -366,21 +368,56 @@ def cornersHeuristic(state, problem):
     shortest path from the state to a goal of the problem; i.e.  it should be
     admissible (as well as consistent).
     """
-    corners = problem.corners # These are the corner coordinates
-    walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
-    "*** YOUR CODE HERE ***"
-    print(state)
-    pos = state[0]
-    min_dist  =  0
-    print(corners)
-    for corner in corners:
-        dist = util.manhattanDistance(pos, corner)
-        print(dist)
-        if dist > min_dist:
-            min_dist = dist
-            print("Corner: ", corner, " Distancia: ", dist, " Min_dist: ", min_dist, pos)
-    return min_dist
 
+    remaining_corners = list(state[1])
+    position =  state[0]
+    fake_foodGrid =  game.Grid(problem.walls.width, problem.walls.height, False, False)
+    for corner in remaining_corners:
+        fake_foodGrid[corner[0]][corner[1]] = True
+
+    corner_count = len(remaining_corners)
+    if corner_count == 0:
+        return 0
+    reached = []
+    ##print("Position: ", position)
+    reached.append(remaining_corners.pop())
+    grid_aux = fake_foodGrid.copy()
+    grid_aux[reached[0][0]][reached[0][1]] = False
+    MST_weight = 0
+    while len(remaining_corners) > 0:
+        chosen = [float('inf'), (0, 0), (0, 0), []]
+        for rechead in reached:
+            ##print("Analisando rechead: ", rechead)
+            fakeGameState = SimpleNamespace(
+                getFood=lambda: grid_aux,
+                getWalls=lambda: problem.walls,
+                getPacmanPosition=lambda: rechead
+            )
+            ##print("Comidas: ", grid_aux.asList())
+            prob = AnyFoodSearchProblem(fakeGameState)
+            result = search.UCS_find_closest(prob)
+            ##print("Result[1]: ", result[1], " len(result[0]): ", len(result[0]), " Origem rechead: ", rechead)
+            
+            if len(result[0]) < chosen[0]:
+                chosen[0] = len(result[0])
+                chosen[1] = result[1]
+                chosen[2] = rechead
+                chosen[3] = result[0]
+        reached.append(chosen[1])
+        ##print("----------Chosen[0]: ", chosen[0], " Origem: ", chosen[2], "Destino: ", chosen[1])
+        ##print("-Caminho: ", chosen[3])
+        MST_weight += chosen[0]
+        remaining_corners.remove(chosen[1])
+        grid_aux[chosen[1][0]][chosen[1][1]] = False
+    fakeGameState = SimpleNamespace(
+        getFood=lambda: fake_foodGrid,
+        getWalls=lambda: problem.walls,
+        getPacmanPosition=lambda: position
+        )
+    prob = AnyFoodSearchProblem(fakeGameState)
+    result = search.UCS_find_closest(prob)
+    return MST_weight + len(result[0])
+    
 class AStarCornersAgent(SearchAgent):
     "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"
     def __init__(self):
