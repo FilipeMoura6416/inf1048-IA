@@ -17,6 +17,8 @@ In search.py, you will implement generic search algorithms which are called by
 Pacman agents (in searchAgents.py).
 """
 
+import queue
+
 import util
 from collections import deque
 class SearchProblem:
@@ -73,20 +75,6 @@ def tinyMazeSearch(problem):
     return  [s, s, w, s, w, w, s, w] 
 
 def depthFirstSearch(problem):
-    """
-    Search the deepest nodes in the search tree first.
-
-    Your search algorithm needs to return a list of actions that reaches the
-    goal. Make sure to implement a graph search algorithm.
-
-    To get started, you might want to try some of these simple commands to
-    understand the search problem that is being passed in:
-
-    ####print("Start:", problem.getStartState())
-    ####print("Is the start a goal?", problem.isGoalState(problem.getStartState()))
-    ####print("Start's successors:", problem.getSuccessors(problem.getStartState()))
-    """
-    "*** YOUR CODE HERE ***"
     class NodoGameTree:
         
         def __init__(self, state, action, cost, previous_state, acumulated_cost, analisado=False):
@@ -97,30 +85,37 @@ def depthFirstSearch(problem):
             self.acumulated_cost = acumulated_cost
             self.cost = cost
     
-    def create_action_list(action_list: list, dicionario:dict,  nodo: NodoGameTree):
-        if nodo.previous_state != None:
-            create_action_list(action_list, dicionario, dicionario[nodo.previous_state])
-            action_list.append(nodo.action)
-        return action_list
+    def create_action_list(dicionario:dict,  nodo: NodoGameTree):
+        action_list =  deque()
+        while(nodo.state != problem.getStartState()):
+            action_list.appendleft(nodo.action)
+            nodo  = dicionario[nodo.previous_state]
+        return list(action_list)
+
     
-    
+
     dicionario = dict()
-    stack = util.Stack()
+    stack = util.Stack() 
     first_node=  NodoGameTree(problem.getStartState(), None, None, None, 0)
     dicionario[first_node.state] = first_node
     stack.push(first_node)
-    while not stack.isEmpty():
+    current_node =  first_node 
+    while not stack.isEmpty(): #por algum motivo, quando eu testo se current_node é o goal state no while, eu visito um node adicional, o que falha o teste no autograder
         current_node = stack.pop()
         if problem.isGoalState(current_node.state):
             break
+        current_node.analisado =  True
         for sucessor in problem.getSuccessors(current_node.state):
             if sucessor[0] not  in dicionario:
                 new_node =  NodoGameTree(sucessor[0], sucessor[1], sucessor[2], current_node.state, current_node.acumulated_cost + sucessor[2], False)
                 dicionario[new_node.state] = new_node
                 stack.push(new_node)
-    
-    action_list = create_action_list(list(), dicionario, current_node)
+
+    action_list = create_action_list( dicionario, current_node)
     return action_list
+    
+    
+
 
 def breadthFirstSearch(problem):
     class NodoGameTree:
